@@ -1,0 +1,465 @@
+{
+ "header": {
+  "project": "SYCAMORE",
+  "order": "2511_SYCAMORE_CT01_REV01",
+  "name": "Cửa chính căn hộ , 1 cánh mở",
+  "size": "Theo bản vẽ",
+  "code": "DC113B(EI60)",
+  "qty": "1 BỘ",
+  "muc": "9.1",
+  "structure": "Module",
+  "material": "MDF LAMINATE",
+  "slsp": 6,
+  "doorType": null,
+  "finishCodes": [
+   "Theo bản vẽ"
+  ]
+ },
+ "partsA": [
+  {
+   "stt": "1",
+   "name": "KHUNG BAO ĐỨNG (KT TINH)",
+   "thick": 48,
+   "width": 150,
+   "length": 2333,
+   "qty": 2,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm) + Ván gỗ ghép tràm CC - 23x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 5x1220x2440 (mm) + MDF HMR E1 - 6x1220x2440 (mm)",
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x55 (mm)",
+   "edges": "2d0r",
+   "primeFaces": "1m0d2r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  {
+   "stt": "2",
+   "name": "KHUNG BAO NGANG (KT TINH)",
+   "thick": 48,
+   "width": 150,
+   "length": 818,
+   "qty": 1,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm) + Ván gỗ ghép tràm CC - 23x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 5x1220x2440 (mm) + MDF HMR E1 - 6x1220x2440 (mm)",
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x55 (mm)",
+   "edges": "2d0r",
+   "primeFaces": "1m0d2r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  {
+   "stt": "3",
+   "name": "REBATE-DUNG-KT-TINH",
+   "thick": 26,
+   "width": 78,
+   "length": 2285,
+   "qty": 2,
+   "primeFaces": "1m0d2r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  {
+   "stt": "3.1",
+   "name": "PANEL MẶT",
+   "thick": 16,
+   "width": 78,
+   "length": 2305,
+   "qty": 2,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 15x1220x2440 (mm)",
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x23 (mm)",
+   "edges": "2d0r"
+  },
+  {
+   "stt": "3.2",
+   "name": "CHỐNG CHÁY",
+   "thick": 10,
+   "width": 54,
+   "length": 2305,
+   "qty": 2,
+   "material": "Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)"
+  },
+  {
+   "stt": "4",
+   "name": "REBATE-NGANG-KT-TINH",
+   "thick": 26,
+   "width": 78,
+   "length": 722,
+   "qty": 1,
+   "primeFaces": "1m0d2r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  {
+   "stt": "4.1",
+   "name": "PANEL MẶT",
+   "thick": 16,
+   "width": 78,
+   "length": 742,
+   "qty": 1,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 15x1220x2440 (mm)",
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x23 (mm)",
+   "edges": "2d0r"
+  },
+  {
+   "stt": "4.2",
+   "name": "CHỐNG CHÁY",
+   "thick": 10,
+   "width": 54,
+   "length": 742,
+   "qty": 1,
+   "material": "Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)"
+  },
+  {
+   "stt": "5",
+   "name": "CCHUP-DUNG1-KT-TINH",
+   "thick": 23,
+   "width": 97,
+   "length": 2397,
+   "qty": 2,
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "primeFaces": "1m0d2r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  {
+   "stt": "5.1",
+   "name": "TỔ HỢP",
+   "thick": 14,
+   "width": 97,
+   "length": 2417,
+   "qty": 2,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)",
+   "delivery": "Cắt ra từ tổ hợp dày 14mm ghép từ tấm MDF 1M LAM 4mm + TẤM MGO 10mm - 14x1220x2440 (mm)"
+  },
+  {
+   "stt": "5.2",
+   "name": "CHỈ KÈ",
+   "thick": 9,
+   "width": 9,
+   "length": 2417,
+   "qty": 2,
+   "material": "MDF HMR E1 - 9x1220x2440 (mm)",
+   "delivery": "BẮN VÀO DÁN CẠNH"
+  },
+  {
+   "stt": "6",
+   "name": "CCHUPNGANG1-KT-TINH",
+   "thick": 23,
+   "width": 97,
+   "length": 946,
+   "qty": 1,
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "primeFaces": "1m0d0r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  {
+   "stt": "6.1",
+   "name": "TỔ HỢP",
+   "thick": 14,
+   "width": 97,
+   "length": 966,
+   "qty": 1,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)",
+   "delivery": "Cắt ra từ tổ hợp dày 14mm ghép từ tấm MDF 1M LAM 4mm + TẤM MGO 10mm - 14x1220x2440 (mm)"
+  },
+  {
+   "stt": "6.2",
+   "name": "CHỈ KÈ",
+   "thick": 9,
+   "width": 9,
+   "length": 966,
+   "qty": 1,
+   "material": "MDF HMR E1 - 9x1220x2440 (mm)",
+   "delivery": "BẮN VÀO DÁN CẠNH"
+  },
+  {
+   "stt": "7",
+   "name": "CCHUP-DUNG2-KT-TINH",
+   "thick": 23,
+   "width": 80,
+   "length": 2380,
+   "qty": 2,
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "primeFaces": "1m0d2r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  {
+   "stt": "7.1",
+   "name": "TỔ HỢP",
+   "thick": 14,
+   "width": 80,
+   "length": 2400,
+   "qty": 2,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)",
+   "delivery": "Cắt ra từ tổ hợp dày 14mm ghép từ tấm MDF 1M LAM 4mm + TẤM MGO 10mm - 14x1220x2440 (mm)"
+  },
+  {
+   "stt": "7.2",
+   "name": "CHỈ KÈ",
+   "thick": 9,
+   "width": 9,
+   "length": 2400,
+   "qty": 2,
+   "material": "MDF HMR E1 - 9x1220x2440 (mm)",
+   "delivery": "BẮN VÀO DÁN CẠNH"
+  },
+  {
+   "stt": "8",
+   "name": "CCHUPNGANG2-KT-TINH",
+   "thick": 23,
+   "width": 80,
+   "length": 912,
+   "qty": 1,
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "primeFaces": "1m0d0r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  {
+   "stt": "8.1",
+   "name": "TỔ HỢP",
+   "thick": 14,
+   "width": 80,
+   "length": 932,
+   "qty": 1,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)",
+   "delivery": "Cắt ra từ tổ hợp dày 14mm ghép từ tấm MDF 1M LAM 4mm + TẤM MGO 10mm - 14x1220x2440 (mm)"
+  },
+  {
+   "stt": "8.2",
+   "name": "CHỈ KÈ",
+   "thick": 9,
+   "width": 9,
+   "length": 932,
+   "qty": 1,
+   "material": "MDF HMR E1 - 9x1220x2440 (mm)",
+   "delivery": "BẮN VÀO DÁN CẠNH"
+  },
+  {
+   "stt": "9",
+   "name": "CANH",
+   "thick": 53,
+   "width": 716,
+   "length": 2275,
+   "qty": 1,
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x56 (mm)",
+   "edges": "2d2r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  {
+   "stt": "9.1",
+   "name": "PANEL MẶT",
+   "thick": 4,
+   "width": 736,
+   "length": 2295,
+   "qty": 2,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm)"
+  },
+  {
+   "stt": "10.2",
+   "name": "CHỐNG CHÁY",
+   "thick": 10,
+   "width": 736,
+   "length": 2295,
+   "qty": 2,
+   "material": "Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)"
+  },
+  {
+   "stt": "10.3",
+   "name": "XƯƠNG ĐỨNG",
+   "thick": 25,
+   "width": 60,
+   "length": 2295,
+   "qty": 2,
+   "material": "Ván gỗ ghép tràm CC - 25x1220x2440 (mm)"
+  },
+  {
+   "stt": "10.4",
+   "name": "XƯƠNG NGANG",
+   "thick": 25,
+   "width": 60,
+   "length": 616,
+   "qty": 2,
+   "material": "Ván gỗ ghép tràm CC - 25x1220x2440 (mm)"
+  },
+  {
+   "stt": "10.5",
+   "name": "XƯƠNG ĐỨNG",
+   "thick": 25,
+   "width": 25,
+   "length": 405,
+   "qty": 11,
+   "material": "MDF HMR E1 - 25x1220x2440 (mm)"
+  },
+  {
+   "stt": "10.6",
+   "name": "XƯƠNG NGANG",
+   "thick": 25,
+   "width": 25,
+   "length": 616,
+   "qty": 6,
+   "material": "MDF HMR E1 - 25x1220x2440 (mm)"
+  },
+  {
+   "stt": "10.7",
+   "name": "ROCKWOOL",
+   "thick": 25,
+   "width": 293.5,
+   "length": 403,
+   "qty": 8,
+   "material": "Rockwool 120 kg/m3 - 25x600x1200 (mm)"
+  },
+  {
+   "stt": "10.8",
+   "name": "ROCKWOOL",
+   "thick": 25,
+   "width": 218.5,
+   "length": 403,
+   "qty": 2,
+   "material": "Rockwool 120 kg/m3 - 25x600x1200 (mm)"
+  }
+ ],
+ "partsB": [],
+ "partsC": [
+  {
+   "width": 300,
+   "length": 300,
+   "qty": 1,
+   "unit": "Md"
+  }
+ ],
+ "sign": {
+  "dateText": "Ngày 10 tháng 8 năm 2026",
+  "approver": "Đỗ Hồng Thái",
+  "author": "Phạm Thanh Huy"
+ },
+ "supplies": {
+  "metal": [],
+  "metalWork": [],
+  "aux": [
+   {
+    "code": "NVL22-000032",
+    "name": "Keo Techbond L560S",
+    "unit": "Kg",
+    "qtyFactory": 2.5,
+    "note": "Thay thế Keo Kony Bond CH42 \nThay thế Keo Kony Bond CU3 \nTỷ lệ xúc tác = 15% Keo\nTechbond ( Keo: 6)",
+    "image": "Chỉ dùng để ép cửa chống cháy"
+   },
+   {
+    "code": "NVL22-000033",
+    "name": "Xúc tác Techbond LAP",
+    "unit": "Kg",
+    "qtyFactory": 0.375,
+    "note": "Thay thế Keo Kony Bond CU-H \nTỷ lệ xúc tác = 15% Keo\nTechbond ( Xúc tác: 1)",
+    "image": "Chỉ dùng để ép cửa chống cháy"
+   },
+   {
+    "code": "NVL10-000062",
+    "name": "Đinh U1013J - 5000 cây/hộp",
+    "unit": "Hộp",
+    "spec": "5000 Cây/Hộp",
+    "qtyFactory": 0.04
+   },
+   {
+    "code": "NVL10-000048",
+    "name": "Đinh F30 - 5000 cây/hộp",
+    "unit": "Hộp",
+    "spec": "5000 Cây/Hộp",
+    "qtyFactory": 0.1
+   },
+   {
+    "code": "NVL7-000279",
+    "name": "Chốt gỗ - Ø10x40 (mm)",
+    "unit": "Con",
+    "spec": "Ø10x40",
+    "material": "Gỗ tự nhiên",
+    "qtySite": 4
+   },
+   {
+    "name": "Keo Appolo foam chống cháy theo mẫu",
+    "unit": "Chai",
+    "qtySite": 0.67
+   },
+   {
+    "code": "NVL7-000405",
+    "name": "Vis gỗ đầu chìm - M4x30 (mm) thép xi trắng",
+    "unit": "Con",
+    "spec": "M4x30x8",
+    "material": "Thép xi trắng",
+    "qtyFactory": 40
+   },
+   {
+    "code": "NVL7-000475",
+    "name": "Vis gỗ LGC đầu dẹt - M6x70 (mm) thép xi trắng",
+    "unit": "Con",
+    "spec": "M6x70x13",
+    "material": "Thép xi trắng",
+    "qtySite": 4
+   },
+   {
+    "code": "NVL7-000307",
+    "name": "Tắc kê nhựa + Vis 10x100 (mm)",
+    "unit": "Bộ",
+    "spec": "M10x100",
+    "material": "Nhựa xám + 7 màu",
+    "qtySite": 9
+   },
+   {
+    "code": "NVL22-000168",
+    "name": "Keo Silicon chống cháy Hilti CP606 - 580ml/chai màu xám",
+    "unit": "Chai",
+    "spec": "580ml/chai",
+    "material": "màu xám",
+    "supplier": "Hilti",
+    "qtySite": 0.5
+   },
+   {
+    "code": "NVL10-000046",
+    "name": "Đinh F20 - 5000 cây/hộp",
+    "unit": "Hộp",
+    "spec": "5000 Cây/Hộp",
+    "qtyFactory": 0.1
+   },
+   {
+    "code": "NVL22-000280",
+    "name": "Keo dán Adino PUR 5890.0 - ( 220Kg/phuy)",
+    "unit": "Kg",
+    "spec": "100-120g/m2",
+    "supplier": "Adino",
+    "qtyFactory": 0.5,
+    "note": "Đổi Keo Cosmo 125.130 sang Keo dán Adino PUR 5890.0 - ( 220Kg/phuy) đơn hàng 2533_LUMI_CT05 theo yc P.KH"
+   }
+  ],
+  "accessories": [
+   {
+    "name": "Bộ phụ kiện cửa (theo thực tế)",
+    "unit": "Bộ",
+    "qtyFactory": 1,
+    "note": "Trọn bộ phụ kiện cửa, theo danh sách thực tế công trình gửi về"
+   },
+   {
+    "name": "GIOĂNG CHỐNG ỒN : ASW32TR/BRN",
+    "unit": "MD",
+    "qtySite": 6,
+    "note": "CÔNG TRÌNH CẤP"
+   },
+   {
+    "name": "GIOĂNG CHỐNG CHÁY : RP20040Q0015141",
+    "unit": "THANH",
+    "qtyFactory": 3,
+    "note": "CÔNG TRÌNH CẤP"
+   }
+  ],
+  "subcon": [
+   {
+    "code": "Kiểm duyệt",
+    "qtySub": "Người Lập"
+   },
+   {
+    "code": "Đỗ Hồng Thái",
+    "qtySub": "Phạm Thanh Huy"
+   }
+  ]
+ },
+ "phieu": {
+  "history": []
+ },
+ "packaging": {
+  "standard": "TIÊU CHUẨN DỰ ÁN"
+ }
+}

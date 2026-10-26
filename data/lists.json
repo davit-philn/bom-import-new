@@ -1,0 +1,270 @@
+{
+ "materials": [
+  "_",
+  "Giấy tổ ong - 24x1220x2440 (mm)",
+  "Gỗ ASH loại A dày 35mm",
+  "Gỗ Thông dày 35mm",
+  "MDF HMR E1 - 25x1220x2440 (mm)",
+  "MDF HMR E1 - 9x1220x2440 (mm)",
+  "MDF HMR E1 1M LAM LK 4588A - 15x1220x2440 (mm)",
+  "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm)",
+  "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)",
+  "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm) + Ván gỗ ghép tràm CC - 23x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 5x1220x2440 (mm) + MDF HMR E1 - 6x1220x2440 (mm)",
+  "MDF HMR E1 2M MEL MS 101T - 17x1220x2440 (mm)",
+  "MDF HMR E2 - 17x1220x2440 (mm)",
+  "MDF HMR E2 1M LAM LL2263 1M Backer - 17x1220x2440 (mm)",
+  "MDF HMR E2 1M VER YL-V4227 1M VER Tạp - 17x1220x2440 (mm)",
+  "MDF HMR E2 2M LAM LL2263 - 17x1220x2440 (mm)",
+  "MDF HMR E2 2M MEL MS 4621 - 17x1220x2440 (mm)",
+  "MDF HMR E2 2M VER YL-V4227 - 17x1220x2440 (mm)",
+  "PB - 25x1220x2440 (mm)",
+  "PB Carb P2 - 25x1220x2440 (mm)",
+  "Plywood LVD Carb P2 - 18x1220x2440 (mm)",
+  "Plywood LVD E0 - 18x1220x2440 (mm)",
+  "Plywood LVD nội thất - 18x1220x2440 (mm)",
+  "Plywood SOFA - 18x1220x2440 (mm)",
+  "Rockwool 120 kg/m3 - 25x600x1200 (mm)",
+  "Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)",
+  "Tấm nhựa WPB - 18x1220x2440 (mm)",
+  "Ván gỗ ghép cao su AB - 12x1220x2440 (mm)",
+  "Ván gỗ ghép cao su AB - 18x1220x2440 (mm)",
+  "Ván gỗ ghép tràm BC - 32x1220x2440 (mm)",
+  "Ván gỗ ghép tràm CC - 24x1220x2440 (mm)",
+  "Ván gỗ ghép tràm CC - 25x1220x2440 (mm)",
+  "Ván gỗ ghép tràm CC - 30x1220x2440 (mm)",
+  "Ván gỗ ghép tràm CC - 35x1220x2440 (mm)",
+  "WPB - 6x1220x2440 (mm)",
+  "WPB - 9x1220x2440 (mm)",
+  "WPB 1M LAM 7391NT - 13x1220x2440 (mm)",
+  "WPB 1M LAM 7391NT - 15x1220x2440 (mm)",
+  "WPB 1M LAM 7391NT - 6x1220x2440 (mm)"
+ ],
+ "edgeCodes": [
+  "Chỉ nhựa 7391NT - 0.8x21 (mm)",
+  "Chỉ nhựa 7391NT - 0.8x28 (mm)",
+  "Chỉ nhựa 7391NT - 0.8x43 (mm)",
+  "Chỉ nhựa 8843UN - 0.8x23 (mm)",
+  "Chỉ nhựa LK 4588A - 0.8x23 (mm)",
+  "Chỉ nhựa LK 4588A - 0.8x28 (mm)",
+  "Chỉ nhựa LK 4588A - 0.8x55 (mm)",
+  "Chỉ nhựa LK 4588A - 0.8x56 (mm)",
+  "Chỉ nhựa MS 101T - 0.8x21 (mm)",
+  "Chỉ veneer YL37 - 0.6x20 (mm)"
+ ],
+ "supplyCatalog": {
+  "NVL10-000046": {
+   "name": "Đinh F20 - 5000 cây/hộp",
+   "unit": "Hộp",
+   "spec": "5000 Cây/Hộp"
+  },
+  "NVL10-000048": {
+   "name": "Đinh F30 - 5000 cây/hộp",
+   "unit": "Hộp",
+   "spec": "5000 Cây/Hộp"
+  },
+  "NVL10-000062": {
+   "name": "Đinh U1013J - 5000 cây/hộp",
+   "unit": "Hộp",
+   "spec": "5000 Cây/Hộp"
+  },
+  "NVL22-000032": {
+   "name": "Keo Techbond L560S",
+   "unit": "Kg"
+  },
+  "NVL22-000033": {
+   "name": "Xúc tác Techbond LAP",
+   "unit": "Kg"
+  },
+  "NVL22-000042": {
+   "name": "Keo Cosmo 125.130",
+   "unit": "Kg"
+  },
+  "NVL22-000168": {
+   "name": "Keo Silicon chống cháy Hilti CP606 - 580ml/chai màu xám",
+   "unit": "Chai",
+   "spec": "580ml/chai",
+   "material": "màu xám",
+   "supplier": "Hilti"
+  },
+  "NVL22-000280": {
+   "name": "Keo dán Adino PUR 5890.0 - ( 220Kg/phuy)",
+   "unit": "Kg",
+   "spec": "100-120g/m2",
+   "supplier": "Adino"
+  },
+  "NVL6-000065": {
+   "name": "Keo titebond II Premium 473ml/0.5kg - Tem xanh dương",
+   "unit": "Chai",
+   "spec": "473ml/0.5kg",
+   "material": "Tem chai màu xanh dương - Premium"
+  },
+  "NVL6-000125": {
+   "name": "Keo Soudafoam Gun B3 - 720ml/chai",
+   "unit": "Chai",
+   "spec": "720ml/chai"
+  },
+  "NVL7-000279": {
+   "name": "Chốt gỗ - Ø10x40 (mm)",
+   "unit": "Con",
+   "spec": "Ø10x40",
+   "material": "Gỗ tự nhiên"
+  },
+  "NVL7-000285": {
+   "name": "Chốt gỗ - Ø8x30 (mm)",
+   "unit": "Con",
+   "spec": "Ø8x30",
+   "material": "Gỗ tự nhiên"
+  },
+  "NVL7-000307": {
+   "name": "Tắc kê nhựa + Vis 10x100 (mm)",
+   "unit": "Bộ",
+   "spec": "M10x100",
+   "material": "Nhựa xám + 7 màu"
+  },
+  "NVL7-000392": {
+   "name": "Vis gỗ đầu chìm - M4x10 (mm) inox 304",
+   "unit": "Con",
+   "spec": "M4x10x8",
+   "material": "Inox 304"
+  },
+  "NVL7-000396": {
+   "name": "Vis gỗ đầu chìm - M4x15 (mm) thép xi trắng",
+   "unit": "Con",
+   "spec": "M4x15x8",
+   "material": "Thép xi trắng"
+  },
+  "NVL7-000405": {
+   "name": "Vis gỗ đầu chìm - M4x30 (mm) thép xi trắng",
+   "unit": "Con",
+   "spec": "M4x30x8",
+   "material": "Thép xi trắng"
+  },
+  "NVL7-000427": {
+   "name": "Vis gỗ đầu dù - M4x15 (mm) thép xi trắng",
+   "unit": "Con",
+   "spec": "M4x15x10",
+   "material": "Thép xi trắng"
+  },
+  "NVL7-000432": {
+   "name": "Vis gỗ đầu dù - M4x25 (mm) thép xi trắng",
+   "unit": "Con",
+   "spec": "M4x25x10",
+   "material": "Thép xi trắng"
+  },
+  "NVL7-000475": {
+   "name": "Vis gỗ LGC đầu dẹt - M6x70 (mm) thép xi trắng",
+   "unit": "Con",
+   "spec": "M6x70x13",
+   "material": "Thép xi trắng"
+  },
+  "NVL8-000256": {
+   "name": "Bộ Chốt Ốc Đóng Nở",
+   "unit": "Bộ",
+   "spec": "D37 x DK15mm",
+   "material": "Thép",
+   "supplier": "Tân Cảng"
+  },
+  "NVL8-000397": {
+   "name": "Ốc liên kết J6-10_6001009_JINIO",
+   "unit": "Cái",
+   "supplier": "JINIO"
+  },
+  "NVL8-000401": {
+   "name": "Nắp chụp ốc liên kết J6-10_6001001_JINIO",
+   "unit": "Cái",
+   "supplier": "JINIO"
+  },
+  "NVL8-000476": {
+   "name": "Thân ốc liên kết 0000074_JINIO",
+   "unit": "Cái",
+   "supplier": "JINIO"
+  },
+  "NVL8-001190": {
+   "name": "Ray bi giảm chấn mở toàn phần 494.02.064 - 450 (mm) Hafele",
+   "unit": "Bộ",
+   "spec": "45/450\n(45 là bảng rộng)",
+   "material": "Thép mạ kẽm",
+   "supplier": "Hafele"
+  },
+  "NVL8-001622": {
+   "name": "Nút đệm chống va đập - Ø10x2 (mm) Silicol trong suốt",
+   "unit": "Cái",
+   "spec": "Ø10x2"
+  }
+ },
+ "edges": [
+  "2d2r",
+  "2d1r",
+  "2d0r",
+  "1d2r",
+  "0d2r",
+  "1d1r",
+  "1d0r",
+  "0d1r"
+ ],
+ "faces": [
+  "2m2d2r",
+  "2m2d1r",
+  "2m2d0r",
+  "2m1d2r",
+  "2m1d1r",
+  "2m1d0r",
+  "2m0d2r",
+  "2m0d1r",
+  "2m0d0r",
+  "1m2d2r",
+  "1m2d1r",
+  "1m2d0r",
+  "1m1d2r",
+  "1m1d1r",
+  "1m1d0r",
+  "1m0d2r",
+  "1m0d1r",
+  "1m0d0r",
+  "0m2d2r",
+  "0m2d1r",
+  "0m2d0r",
+  "0m1d2r",
+  "0m1d1r",
+  "0m1d0r",
+  "0m0d2r",
+  "0m0d1r",
+  "0m0d0r"
+ ],
+ "standards": [
+  "XK_CHUẨN 1",
+  "XK_CHUẨN 2",
+  "XK_CHUẨN 3",
+  "XK_CHUẨN 4-ĐI CONT",
+  "XK_CHUẨN 5-ĐI AIR",
+  "XK_CHUẨN 5-AIR PALLET",
+  "TIÊU CHUẨN DỰ ÁN",
+  "TC_CUA",
+  "TC_KH"
+ ],
+ "delivery": [
+  "HOÀN THIỆN ĐI MODULE",
+  "GIAO RỜI"
+ ],
+ "structures": [
+  "Module",
+  "Giao rời",
+  "Theo module và giao rời",
+  "Giao rời và Module"
+ ],
+ "doorTypes": [
+  "CỬA CHỐNG CHÁY",
+  "CỬA THƯỜNG"
+ ],
+ "units": [
+  "Md",
+  "Sf",
+  "Con",
+  "Cụm",
+  "Hệ",
+  "Thanh",
+  "Tấm",
+  "M2",
+  "M3"
+ ]
+}

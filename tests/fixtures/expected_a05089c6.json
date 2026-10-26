@@ -1,0 +1,785 @@
+[
+ {
+  "row": 16,
+  "input": {
+   "stt": 1,
+   "name": "KHUNG BAO ĐỨNG (KT TINH)",
+   "thick": 48,
+   "width": 150,
+   "length": 2333,
+   "qty": 2,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm) + Ván gỗ ghép tràm CC - 23x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 5x1220x2440 (mm) + MDF HMR E1 - 6x1220x2440 (mm) ",
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x55 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "1m0d2r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.23511824778285406,
+   "edgeLen": 9.492,
+   "areaFinish": 0,
+   "areaPrime": 0.7287,
+   "weight": 25.1964,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 17,
+  "input": {
+   "stt": 2,
+   "name": "KHUNG BAO NGANG (KT TINH)",
+   "thick": 48,
+   "width": 150,
+   "length": 818,
+   "qty": 1,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm) + Ván gỗ ghép tràm CC - 23x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 5x1220x2440 (mm) + MDF HMR E1 - 6x1220x2440 (mm) ",
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x55 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "1m0d2r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.041218758398280035,
+   "edgeLen": 1.716,
+   "areaFinish": 0,
+   "areaPrime": 0.1371,
+   "weight": 4.4172,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 18,
+  "input": {
+   "stt": 3,
+   "name": "REBATE-DUNG-KT-TINH",
+   "thick": 26,
+   "width": 78,
+   "length": 2285,
+   "qty": 2,
+   "material": null,
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "1m0d2r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  "expected": {
+   "unit": null,
+   "mass": 0,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0.364572,
+   "weight": 6.950970000000001,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 19,
+  "input": {
+   "stt": "3.1",
+   "name": "PANEL MẶT",
+   "thick": 16,
+   "width": 78,
+   "length": 2305,
+   "qty": 2,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 15x1220x2440 (mm) ",
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x23 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.1207941413598495,
+   "edgeLen": 9.38,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 4.31496,
+   "pldg": null
+  }
+ },
+ {
+  "row": 20,
+  "input": {
+   "stt": "3.2",
+   "name": "CHỐNG CHÁY",
+   "thick": 10,
+   "width": 54,
+   "length": 2305,
+   "qty": 2,
+   "material": "Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.08362671324912659,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 1.86705,
+   "pldg": null
+  }
+ },
+ {
+  "row": 21,
+  "input": {
+   "stt": 4,
+   "name": "REBATE-NGANG-KT-TINH",
+   "thick": 26,
+   "width": 78,
+   "length": 722,
+   "qty": 1,
+   "material": null,
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "1m0d2r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  "expected": {
+   "unit": null,
+   "mass": 0,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0.060371999999999995,
+   "weight": 1.098162,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 22,
+  "input": {
+   "stt": "4.1",
+   "name": "PANEL MẶT",
+   "thick": 16,
+   "width": 78,
+   "length": 742,
+   "qty": 1,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 15x1220x2440 (mm) ",
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x23 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.01944235420585864,
+   "edgeLen": 1.564,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.6945120000000001,
+   "pldg": null
+  }
+ },
+ {
+  "row": 23,
+  "input": {
+   "stt": "4.2",
+   "name": "CHỐNG CHÁY",
+   "thick": 10,
+   "width": 54,
+   "length": 742,
+   "qty": 1,
+   "material": "Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.013460091373286751,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.30051000000000005,
+   "pldg": null
+  }
+ },
+ {
+  "row": 24,
+  "input": {
+   "stt": 5,
+   "name": "CCHUP-DUNG1-KT-TINH",
+   "thick": 23,
+   "width": 97,
+   "length": 2397,
+   "qty": 2,
+   "material": null,
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "1m0d2r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  "expected": {
+   "unit": null,
+   "mass": 0,
+   "edgeLen": 9.748,
+   "areaFinish": 0,
+   "areaPrime": 0.473942,
+   "weight": 8.0215605,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 25,
+  "input": {
+   "stt": "5.1",
+   "name": "TỔ HỢP",
+   "thick": 14,
+   "width": 97,
+   "length": 2417,
+   "qty": 2,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "Cắt ra từ tổ hợp dày 14mm ghép từ tấm MDF 1M LAM 4mm + TẤM MGO 10mm - 14x1220x2440 (mm)"
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.15751746842246708,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 4.9234290000000005,
+   "pldg": null
+  }
+ },
+ {
+  "row": 26,
+  "input": {
+   "stt": "5.2",
+   "name": "CHỈ KÈ",
+   "thick": 9,
+   "width": 9,
+   "length": 2417,
+   "qty": 2,
+   "material": "MDF HMR E1 - 9x1220x2440 (mm) ",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "BẮN VÀO DÁN CẠNH"
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.014615022843321687,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.2936655,
+   "pldg": null
+  }
+ },
+ {
+  "row": 27,
+  "input": {
+   "stt": 6,
+   "name": "CCHUPNGANG1-KT-TINH",
+   "thick": 23,
+   "width": 97,
+   "length": 946,
+   "qty": 1,
+   "material": null,
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "1m0d0r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  "expected": {
+   "unit": null,
+   "mass": 0,
+   "edgeLen": 1.972,
+   "areaFinish": 0,
+   "areaPrime": 0.091762,
+   "weight": 1.5828945,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 28,
+  "input": {
+   "stt": "6.1",
+   "name": "TỔ HỢP",
+   "thick": 14,
+   "width": 97,
+   "length": 966,
+   "qty": 1,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "Cắt ra từ tổ hợp dày 14mm ghép từ tấm MDF 1M LAM 4mm + TẤM MGO 10mm - 14x1220x2440 (mm)"
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.031477425423273316,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.983871,
+   "pldg": null
+  }
+ },
+ {
+  "row": 29,
+  "input": {
+   "stt": "6.2",
+   "name": "CHỈ KÈ",
+   "thick": 9,
+   "width": 9,
+   "length": 966,
+   "qty": 1,
+   "material": "MDF HMR E1 - 9x1220x2440 (mm) ",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "BẮN VÀO DÁN CẠNH"
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.00292058586401505,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.05868450000000001,
+   "pldg": null
+  }
+ },
+ {
+  "row": 30,
+  "input": {
+   "stt": 7,
+   "name": "CCHUP-DUNG2-KT-TINH",
+   "thick": 23,
+   "width": 80,
+   "length": 2380,
+   "qty": 2,
+   "material": null,
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "1m0d2r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  "expected": {
+   "unit": null,
+   "mass": 0,
+   "edgeLen": 9.68,
+   "areaFinish": 0,
+   "areaPrime": 0.38816,
+   "weight": 6.568800000000001,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 31,
+  "input": {
+   "stt": "7.1",
+   "name": "TỔ HỢP",
+   "thick": 14,
+   "width": 80,
+   "length": 2400,
+   "qty": 2,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "Cắt ra từ tổ hợp dày 14mm ghép từ tấm MDF 1M LAM 4mm + TẤM MGO 10mm - 14x1220x2440 (mm)"
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.12899758129535072,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 4.032,
+   "pldg": null
+  }
+ },
+ {
+  "row": 32,
+  "input": {
+   "stt": "7.2",
+   "name": "CHỈ KÈ",
+   "thick": 9,
+   "width": 9,
+   "length": 2400,
+   "qty": 2,
+   "material": "MDF HMR E1 - 9x1220x2440 (mm) ",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "BẮN VÀO DÁN CẠNH"
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.014512227895726955,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.2916,
+   "pldg": null
+  }
+ },
+ {
+  "row": 33,
+  "input": {
+   "stt": 8,
+   "name": "CCHUPNGANG2-KT-TINH",
+   "thick": 23,
+   "width": 80,
+   "length": 912,
+   "qty": 1,
+   "material": null,
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "1m0d0r",
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  "expected": {
+   "unit": null,
+   "mass": 0,
+   "edgeLen": 1.904,
+   "areaFinish": 0,
+   "areaPrime": 0.07296,
+   "weight": 1.2585600000000001,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 34,
+  "input": {
+   "stt": "8.1",
+   "name": "TỔ HỢP",
+   "thick": 14,
+   "width": 80,
+   "length": 932,
+   "qty": 1,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) + Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "Cắt ra từ tổ hợp dày 14mm ghép từ tấm MDF 1M LAM 4mm + TẤM MGO 10mm - 14x1220x2440 (mm)"
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.025047030368180595,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.78288,
+   "pldg": null
+  }
+ },
+ {
+  "row": 35,
+  "input": {
+   "stt": "8.2",
+   "name": "CHỈ KÈ",
+   "thick": 9,
+   "width": 9,
+   "length": 932,
+   "qty": 1,
+   "material": "MDF HMR E1 - 9x1220x2440 (mm) ",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "BẮN VÀO DÁN CẠNH"
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.002817790916420317,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.056619,
+   "pldg": null
+  }
+ },
+ {
+  "row": 36,
+  "input": {
+   "stt": 9,
+   "name": "CANH",
+   "thick": 53,
+   "width": 716,
+   "length": 2275,
+   "qty": 1,
+   "material": null,
+   "edgeCode": "Chỉ nhựa LK 4588A - 0.8x56 (mm)",
+   "edges": "2d2r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  "expected": {
+   "unit": null,
+   "mass": 0,
+   "edgeLen": 6.1419999999999995,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 64.74877500000001,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 37,
+  "input": {
+   "stt": "9.1",
+   "name": "PANEL MẶT",
+   "thick": 4,
+   "width": 736,
+   "length": 2295,
+   "qty": 2,
+   "material": "MDF HMR E1 1M LAM LK 4588A - 3x1220x2440 (mm) ",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 1.134856221445848,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 10.134720000000002,
+   "pldg": null
+  }
+ },
+ {
+  "row": 38,
+  "input": {
+   "stt": "10.2",
+   "name": "CHỐNG CHÁY",
+   "thick": 10,
+   "width": 736,
+   "length": 2295,
+   "qty": 2,
+   "material": "Tấm chống cháy Eron/MgO (Magie Oxit) - 10x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 1.134856221445848,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 25.336800000000004,
+   "pldg": null
+  }
+ },
+ {
+  "row": 39,
+  "input": {
+   "stt": "10.3",
+   "name": "XƯƠNG ĐỨNG",
+   "thick": 25,
+   "width": 60,
+   "length": 2295,
+   "qty": 2,
+   "material": "Ván gỗ ghép tràm CC - 25x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.09251545283525935,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 5.16375,
+   "pldg": null
+  }
+ },
+ {
+  "row": 40,
+  "input": {
+   "stt": "10.4",
+   "name": "XƯƠNG NGANG",
+   "thick": 25,
+   "width": 60,
+   "length": 616,
+   "qty": 2,
+   "material": "Ván gỗ ghép tràm CC - 25x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.024832034399355014,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 1.3860000000000001,
+   "pldg": null
+  }
+ },
+ {
+  "row": 41,
+  "input": {
+   "stt": "10.5",
+   "name": "XƯƠNG ĐỨNG",
+   "thick": 25,
+   "width": 25,
+   "length": 405,
+   "qty": 11,
+   "material": "MDF HMR E1 - 25x1220x2440 (mm) ",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.03741433754367106,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 2.08828125,
+   "pldg": null
+  }
+ },
+ {
+  "row": 42,
+  "input": {
+   "stt": "10.6",
+   "name": "XƯƠNG NGANG",
+   "thick": 25,
+   "width": 25,
+   "length": 616,
+   "qty": 6,
+   "material": "MDF HMR E1 - 25x1220x2440 (mm) ",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.031040042999193766,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 1.7325,
+   "pldg": null
+  }
+ },
+ {
+  "row": 43,
+  "input": {
+   "stt": "10.7",
+   "name": "ROCKWOOL",
+   "thick": 25,
+   "width": 293.5,
+   "length": 403,
+   "qty": 8,
+   "material": "Rockwool 120 kg/m3 - 25x600x1200 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.31787288363343186,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 17.742075000000003,
+   "pldg": null
+  }
+ },
+ {
+  "row": 44,
+  "input": {
+   "stt": "10.8",
+   "name": "ROCKWOOL",
+   "thick": 25,
+   "width": 218.5,
+   "length": 403,
+   "qty": 2,
+   "material": "Rockwool 120 kg/m3 - 25x600x1200 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.05916117979037893,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 3.30208125,
+   "pldg": null
+  }
+ }
+]

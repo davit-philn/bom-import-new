@@ -1,0 +1,333 @@
+{
+ "header": {
+  "project": "Dự án trường ISHCMC",
+  "order": "2632_NOTAG DA_ ISHCMC_CT03",
+  "name": "Square Table (TB-404)",
+  "size": "Theo bản vẽ",
+  "code": "TB-404",
+  "qty": "1 Hệ",
+  "muc": "8",
+  "structure": "Theo module và giao rời",
+  "material": "Kích thước L1400xD800xH800 mm :\nThùng tủ tấm CS-01 18mm\nMặt ngăn kéo tấm MDF 17mm Melamine trắng\nChân bàn mặt đỡ trên dưới tấm sắt 5mm, chân trụ sắt 15mm sơn tĩnh điện PC-01",
+  "slsp": 8,
+  "doorType": null,
+  "finishCodes": [
+   "CS-01",
+   "PC-01",
+   "GL-04",
+   "đồng màu MS101T"
+  ]
+ },
+ "partsA": [
+  {
+   "stt": "1",
+   "name": "MODULE MD1",
+   "thick": 800,
+   "width": 800,
+   "length": 1400,
+   "qty": 1,
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  {
+   "stt": "1.1",
+   "name": "hông bìa_01_001",
+   "thick": 18,
+   "width": 114,
+   "length": 798,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 18x1220x2440 (mm)",
+   "finishCode": "CS-01",
+   "faces": "2m0d2r"
+  },
+  {
+   "stt": "1.2",
+   "name": "hông bìa_01_002",
+   "thick": 18,
+   "width": 114,
+   "length": 798,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 18x1220x2440 (mm)",
+   "finishCode": "CS-01",
+   "faces": "2m0d2r"
+  },
+  {
+   "stt": "1.3",
+   "name": "hông giữa_01_003",
+   "thick": 18,
+   "width": 114,
+   "length": 760,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 18x1220x2440 (mm)",
+   "finishCode": "CS-01",
+   "faces": "2m0d1r"
+  },
+  {
+   "stt": "1.4",
+   "name": "nóc_01_004",
+   "thick": 18,
+   "width": 800,
+   "length": 1400,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 18x1220x2440 (mm)",
+   "finishCode": "CS-01",
+   "faces": "2m2d2r"
+  },
+  {
+   "stt": "1.5",
+   "name": "đáy_01_005",
+   "thick": 18,
+   "width": 800,
+   "length": 1400,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 18x1220x2440 (mm)",
+   "finishCode": "CS-01",
+   "faces": "2m2d2r"
+  },
+  {
+   "stt": "1.6",
+   "name": "hậu_01_006",
+   "thick": 18,
+   "width": 114,
+   "length": 964,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 18x1220x2440 (mm)",
+   "finishCode": "CS-01",
+   "faces": "2m0d0r"
+  },
+  {
+   "stt": "1.7",
+   "name": "mặt hk_01_007",
+   "thick": 17,
+   "width": 110,
+   "length": 479,
+   "qty": 2,
+   "material": "MDF HMR E1 2M MEL MS 101T - 17x1220x2440 (mm)",
+   "edgeCode": "Chỉ nhựa MS 101T - 0.8x21 (mm)",
+   "edges": "2d2r"
+  },
+  {
+   "stt": "1.8",
+   "name": "thành trái hk_01_008",
+   "thick": 12,
+   "width": 97,
+   "length": 450,
+   "qty": 2,
+   "material": "Ván gỗ ghép cao su AB - 12x1220x2440 (mm)",
+   "finishCode": "CS-01",
+   "faces": "2m2d1r"
+  },
+  {
+   "stt": "1.9",
+   "name": "thành phải hk_01_009",
+   "thick": 12,
+   "width": 97,
+   "length": 450,
+   "qty": 2,
+   "material": "Ván gỗ ghép cao su AB - 12x1220x2440 (mm)",
+   "finishCode": "CS-01",
+   "faces": "2m2d1r"
+  },
+  {
+   "stt": "1.1",
+   "name": "thành sau hk_01_010",
+   "thick": 12,
+   "width": 74,
+   "length": 423,
+   "qty": 2,
+   "material": "Ván gỗ ghép cao su AB - 12x1220x2440 (mm)",
+   "finishCode": "CS-01",
+   "faces": "2m2d0r"
+  },
+  {
+   "stt": "1.11",
+   "name": "thành trước hk_01_011",
+   "thick": 12,
+   "width": 74,
+   "length": 423,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 12x1220x2440 (mm)",
+   "finishCode": "CS-01",
+   "faces": "2m2d0r"
+  },
+  {
+   "stt": "1.12",
+   "name": "đáy hk_01_012",
+   "thick": 12,
+   "width": 450,
+   "length": 433,
+   "qty": 2,
+   "material": "Ván gỗ ghép cao su AB - 12x1220x2440 (mm)",
+   "finishCode": "CS-01",
+   "faces": "2m1d0r"
+  },
+  {
+   "stt": "1.13",
+   "name": "thành trước hk_01_013",
+   "thick": 12,
+   "width": 74,
+   "length": 423,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 12x1220x2440 (mm)",
+   "finishCode": "CS-01",
+   "faces": "2m2d0r"
+  }
+ ],
+ "partsB": [],
+ "partsC": [],
+ "sign": {
+  "dateText": "Ngày 27 tháng 8 năm 2026",
+  "approver": "Đỗ Hồng Thái",
+  "author": "Nguyễn Huỳnh Định"
+ },
+ "supplies": {
+  "metal": [],
+  "metalWork": [],
+  "aux": [
+   {
+    "code": "NVL7-000285",
+    "name": "Chốt gỗ - Ø8x30 (mm)",
+    "unit": "Con",
+    "spec": "Ø8x30",
+    "material": "Gỗ tự nhiên",
+    "qtyFactory": 16
+   },
+   {
+    "code": "NVL6-000065",
+    "name": "Keo titebond II Premium 473ml/0.5kg - Tem xanh dương",
+    "unit": "Chai",
+    "spec": "473ml/0.5kg",
+    "material": "Tem chai màu xanh dương - Premium",
+    "qtyFactory": 0.2
+   },
+   {
+    "code": "NVL7-000392",
+    "name": "Vis gỗ đầu chìm - M4x10 (mm) inox 304",
+    "unit": "Con",
+    "spec": "M4x10x8",
+    "material": "Inox 304",
+    "qtyFactory": 8
+   },
+   {
+    "code": "NVL7-000427",
+    "name": "Vis gỗ đầu dù - M4x15 (mm) thép xi trắng",
+    "unit": "Con",
+    "spec": "M4x15x10",
+    "material": "Thép xi trắng",
+    "qtyFactory": 12
+   },
+   {
+    "code": "NVL7-000432",
+    "name": "Vis gỗ đầu dù - M4x25 (mm) thép xi trắng",
+    "unit": "Con",
+    "spec": "M4x25x10",
+    "material": "Thép xi trắng",
+    "qtyFactory": 8
+   },
+   {
+    "code": "NVL7-000396",
+    "name": "Vis gỗ đầu chìm - M4x15 (mm) thép xi trắng",
+    "unit": "Con",
+    "spec": "M4x15x8",
+    "material": "Thép xi trắng",
+    "qtyFactory": 24
+   }
+  ],
+  "accessories": [
+   {
+    "code": "NVL8-001190",
+    "name": "Ray bi giảm chấn mở toàn phần 494.02.064 - 450 (mm) Hafele",
+    "unit": "Bộ",
+    "spec": "45/450\n(45 là bảng rộng)",
+    "material": "Thép mạ kẽm",
+    "supplier": "Hafele",
+    "qtyFactory": 2
+   },
+   {
+    "code": "NVL8-000476",
+    "name": "Thân ốc liên kết 0000074_JINIO",
+    "unit": "Cái",
+    "supplier": "JINIO",
+    "qtyFactory": 22
+   },
+   {
+    "code": "NVL8-000397",
+    "name": "Ốc liên kết J6-10_6001009_JINIO",
+    "unit": "Cái",
+    "supplier": "JINIO",
+    "qtyFactory": 22
+   },
+   {
+    "code": "NVL8-000401",
+    "name": "Nắp chụp ốc liên kết J6-10_6001001_JINIO",
+    "unit": "Cái",
+    "supplier": "JINIO",
+    "qtyFactory": 22
+   },
+   {
+    "code": "NVL8-000256",
+    "name": "Bộ Chốt Ốc Đóng Nở",
+    "unit": "Bộ",
+    "spec": "D37 x DK15mm",
+    "material": "Thép",
+    "supplier": "Tân Cảng",
+    "qtyFactory": 10
+   },
+   {
+    "code": "NVL8-001622",
+    "name": "Nút đệm chống va đập - Ø10x2 (mm) Silicol trong suốt",
+    "unit": "Cái",
+    "spec": "Ø10x2",
+    "qtyFactory": 12
+   }
+  ],
+  "subcon": [
+   {
+    "name": "TẤM KÍNH _TB-404",
+    "unit": "Tấm",
+    "qtyFactory": 1,
+    "image": "TPGC"
+   },
+   {
+    "name": "CHÂN BÀN TRÁI_TB-404  (bao gồm dán nỉ đế chân)",
+    "unit": "Cái",
+    "qtyFactory": 2,
+    "image": "TPGC"
+   },
+   {
+    "name": "CHÂN BÀN PHẢI_TB-404  (bao gồm dán nỉ đế chân)",
+    "unit": "Cái",
+    "qtyFactory": 2,
+    "image": "TPGC"
+   },
+   {
+    "code": "Kiểm duyệt",
+    "qtyFactory": "Người Lập"
+   },
+   {
+    "code": "Đỗ Hồng Thái",
+    "qtyFactory": "Nguyễn Huỳnh Định"
+   }
+  ]
+ },
+ "phieu": {
+  "history": [
+   {
+    "no": "1",
+    "basis": "PKT",
+    "content": "bs nút hít kính, thêm dung sai tấm kính (os). Điều chỉnh mặt bằng đúng của chân thép",
+    "date": "2026-07-07 00:00:00",
+    "by": "Nguyễn Huỳnh Định"
+   },
+   {
+    "no": "2",
+    "basis": "PM",
+    "content": "cập nhật các thay đổi, lưu trữ file (không phát hành)",
+    "date": "06/082026",
+    "by": "Nguyễn Huỳnh Định"
+   }
+  ]
+ },
+ "packaging": {
+  "standard": "XK_CHUẨN 1"
+ }
+}

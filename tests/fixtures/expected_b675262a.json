@@ -1,0 +1,1055 @@
+[
+ {
+  "row": 13,
+  "input": {
+   "stt": 1,
+   "name": "KHUNG BAO ĐỨNG",
+   "thick": 37,
+   "width": 215,
+   "length": 2200,
+   "qty": 2,
+   "material": "_",
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x43 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "0m0d2r",
+   "delivery": "Vát 45 độ 01 đầu. \nCắt ra từ tổ hợp ghép tấm 1220x2440 7mm 1M Laminate với 30mm gỗ ghép tràm"
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.3177909164203171,
+   "edgeLen": 8.88,
+   "areaFinish": 0,
+   "areaPrime": 0.03182,
+   "weight": 26.251500000000004,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 14,
+  "input": {
+   "stt": 1.1,
+   "name": "xương",
+   "thick": 30,
+   "width": 215,
+   "length": 2220,
+   "qty": 2,
+   "material": "Ván gỗ ghép tràm CC - 30x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.32067992475141094,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 21.4785,
+   "pldg": null
+  }
+ },
+ {
+  "row": 15,
+  "input": {
+   "stt": 1.2,
+   "name": "ván ốp",
+   "thick": 7,
+   "width": 215,
+   "length": 2220,
+   "qty": 2,
+   "material": "WPB 1M LAM 7391NT - 6x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.32067992475141094,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 5.01165,
+   "pldg": null
+  }
+ },
+ {
+  "row": 16,
+  "input": {
+   "stt": 2,
+   "name": "KHUNG BAO NGANG",
+   "thick": 37,
+   "width": 215,
+   "length": 900,
+   "qty": 1,
+   "material": "_",
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x43 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "0m0d2r",
+   "delivery": "Vát 45 độ 02 đầu.\nCắt ra từ tổ hợp ghép tấm 1220x2440 7mm 1M Laminate với 30mm gỗ ghép tràm"
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.06500268744961032,
+   "edgeLen": 1.8800000000000001,
+   "areaFinish": 0,
+   "areaPrime": 0.01591,
+   "weight": 5.369625,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 17,
+  "input": {
+   "stt": 2.1,
+   "name": "xương",
+   "thick": 30,
+   "width": 215,
+   "length": 920,
+   "qty": 1,
+   "material": "Ván gỗ ghép tràm CC - 30x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.06644719161515722,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 4.4505,
+   "pldg": null
+  }
+ },
+ {
+  "row": 18,
+  "input": {
+   "stt": 2.2,
+   "name": "ván ốp",
+   "thick": 7,
+   "width": 215,
+   "length": 920,
+   "qty": 1,
+   "material": "WPB 1M LAM 7391NT - 6x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.06644719161515722,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 1.03845,
+   "pldg": null
+  }
+ },
+ {
+  "row": 19,
+  "input": {
+   "stt": 3,
+   "name": "REBATE ĐỨNG",
+   "thick": 22,
+   "width": 158,
+   "length": 2169,
+   "qty": 2,
+   "material": "_",
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "Vát 45 độ 01 đầu"
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.23024858908895457,
+   "edgeLen": 8.756,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 11.309166,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 20,
+  "input": {
+   "stt": 3.1,
+   "name": "ván ốp",
+   "thick": 16,
+   "width": 158,
+   "length": 2189,
+   "qty": 2,
+   "material": "WPB 1M LAM 7391NT - 15x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.23237167428110722,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 8.300688000000001,
+   "pldg": null
+  }
+ },
+ {
+  "row": 21,
+  "input": {
+   "stt": 3.2,
+   "name": "nền",
+   "thick": 6,
+   "width": 138,
+   "length": 2189,
+   "qty": 2,
+   "material": "WPB - 6x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.20295753829615695,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 2.718738,
+   "pldg": null
+  }
+ },
+ {
+  "row": 22,
+  "input": {
+   "stt": 4,
+   "name": "REBATE NGANG",
+   "thick": 22,
+   "width": 158,
+   "length": 838,
+   "qty": 1,
+   "material": "_",
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "Vát 45 độ 02 đầu"
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.04447863477559796,
+   "edgeLen": 1.756,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 2.184666,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 23,
+  "input": {
+   "stt": 4.1,
+   "name": "ván ốp",
+   "thick": 16,
+   "width": 158,
+   "length": 858,
+   "qty": 1,
+   "material": "WPB 1M LAM 7391NT - 15x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.04554017737167428,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 1.6267680000000002,
+   "pldg": null
+  }
+ },
+ {
+  "row": 24,
+  "input": {
+   "stt": 4.2,
+   "name": "nền",
+   "thick": 6,
+   "width": 138,
+   "length": 858,
+   "qty": 1,
+   "material": "WPB - 6x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.039775597957538295,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.532818,
+   "pldg": null
+  }
+ },
+ {
+  "row": 25,
+  "input": {
+   "stt": 5,
+   "name": "CỤM CHỈ KHUNG BAO (TOILET)",
+   "thick": 57,
+   "width": 50,
+   "length": 2248,
+   "qty": 1,
+   "material": "_",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.03775866702499328,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 4.8051,
+   "pldg": 2
+  }
+ },
+ {
+  "row": 26,
+  "input": {
+   "stt": 5.1,
+   "name": "Chỉ khung bao đứng 1",
+   "thick": 22,
+   "width": 50,
+   "length": 2248,
+   "qty": 1,
+   "material": null,
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "Vát 45 độ 01 đầu"
+  },
+  "expected": {
+   "unit": null,
+   "mass": 0,
+   "edgeLen": 4.5760000000000005,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 1.8546000000000002,
+   "pldg": 2
+  }
+ },
+ {
+  "row": 27,
+  "input": {
+   "stt": "5.1.1",
+   "name": "Panel",
+   "thick": 13,
+   "width": 50,
+   "length": 2268,
+   "qty": 1,
+   "material": "WPB 1M LAM 7391NT - 13x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.038094598226283256,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 1.10565,
+   "pldg": null
+  }
+ },
+ {
+  "row": 28,
+  "input": {
+   "stt": "5.1.2",
+   "name": "Viền",
+   "thick": 9,
+   "width": 9,
+   "length": 2248,
+   "qty": 1,
+   "material": "WPB - 9x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.006796560064498791,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.136566,
+   "pldg": null
+  }
+ },
+ {
+  "row": 29,
+  "input": {
+   "stt": 5.2,
+   "name": "ChỈ khung bao đứng 2",
+   "thick": 13,
+   "width": 50,
+   "length": 2248,
+   "qty": 1,
+   "material": null,
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "Vát 45 độ 01 đầu"
+  },
+  "expected": {
+   "unit": null,
+   "mass": 0,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 1.0959,
+   "pldg": 2
+  }
+ },
+ {
+  "row": 30,
+  "input": {
+   "stt": "5.2.1",
+   "name": "Panel",
+   "thick": 13,
+   "width": 50,
+   "length": 2268,
+   "qty": 1,
+   "material": "WPB 1M LAM 7391NT - 13x1220x2440 (mm)",
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x21 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.038094598226283256,
+   "edgeLen": 4.616,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 1.10565,
+   "pldg": null
+  }
+ },
+ {
+  "row": 31,
+  "input": {
+   "stt": 5.3,
+   "name": "Chỉ khung bao ngang",
+   "thick": 22,
+   "width": 50,
+   "length": 956,
+   "qty": 1,
+   "material": null,
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "Vát 45 độ 02 đầu"
+  },
+  "expected": {
+   "unit": null,
+   "mass": 0,
+   "edgeLen": 1.992,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.7887,
+   "pldg": 2
+  }
+ },
+ {
+  "row": 32,
+  "input": {
+   "stt": "5.3.1",
+   "name": "Panel",
+   "thick": 13,
+   "width": 50,
+   "length": 976,
+   "qty": 1,
+   "material": "WPB 1M LAM 7391NT - 13x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.01639344262295082,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.4758,
+   "pldg": null
+  }
+ },
+ {
+  "row": 33,
+  "input": {
+   "stt": "5.3.2",
+   "name": "Viền",
+   "thick": 9,
+   "width": 9,
+   "length": 976,
+   "qty": 1,
+   "material": "WPB - 9x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.0029508196721311475,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.059292000000000004,
+   "pldg": null
+  }
+ },
+ {
+  "row": 34,
+  "input": {
+   "stt": 6,
+   "name": "CỤM CHỈ KHUNG BAO (PUBLIC)",
+   "thick": 66,
+   "width": 50,
+   "length": 2228,
+   "qty": 1,
+   "material": null,
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": null,
+   "mass": 0,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 5.5143,
+   "pldg": 2
+  }
+ },
+ {
+  "row": 35,
+  "input": {
+   "stt": 6.1,
+   "name": "Chỉ khung bao đứng",
+   "thick": 22,
+   "width": 50,
+   "length": 2228,
+   "qty": 2,
+   "material": null,
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "Vát 45 độ 01 đầu"
+  },
+  "expected": {
+   "unit": null,
+   "mass": 0,
+   "edgeLen": 8.992,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 3.6761999999999997,
+   "pldg": 2
+  }
+ },
+ {
+  "row": 36,
+  "input": {
+   "stt": "6.1.1",
+   "name": "Panel",
+   "thick": 13,
+   "width": 50,
+   "length": 2248,
+   "qty": 2,
+   "material": "WPB 1M LAM 7391NT - 13x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.07551733404998656,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 2.1918,
+   "pldg": null
+  }
+ },
+ {
+  "row": 37,
+  "input": {
+   "stt": "6.1.2",
+   "name": "Viền",
+   "thick": 9,
+   "width": 9,
+   "length": 2248,
+   "qty": 2,
+   "material": "WPB - 9x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.013593120128997582,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.273132,
+   "pldg": null
+  }
+ },
+ {
+  "row": 38,
+  "input": {
+   "stt": 6.2,
+   "name": "Chỉ khung bao ngang",
+   "thick": 22,
+   "width": 50,
+   "length": 956,
+   "qty": 1,
+   "material": null,
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "Vát 45 độ 02 đầu"
+  },
+  "expected": {
+   "unit": null,
+   "mass": 0,
+   "edgeLen": 1.992,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.7887,
+   "pldg": 2
+  }
+ },
+ {
+  "row": 39,
+  "input": {
+   "stt": "6.2.1",
+   "name": "Panel",
+   "thick": 13,
+   "width": 50,
+   "length": 976,
+   "qty": 1,
+   "material": "WPB 1M LAM 7391NT - 13x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.01639344262295082,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.4758,
+   "pldg": null
+  }
+ },
+ {
+  "row": 40,
+  "input": {
+   "stt": "6.2.2",
+   "name": "Viền",
+   "thick": 9,
+   "width": 9,
+   "length": 976,
+   "qty": 1,
+   "material": "WPB - 9x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.0029508196721311475,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.059292000000000004,
+   "pldg": null
+  }
+ },
+ {
+  "row": 41,
+  "input": {
+   "stt": 7,
+   "name": "CÁNH",
+   "thick": 38,
+   "width": 820,
+   "length": 2153,
+   "qty": 1,
+   "material": "_",
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x43 (mm)",
+   "edges": "2d2r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.5930730986294007,
+   "edgeLen": 6.106,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 50.31561000000001,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 42,
+  "input": {
+   "stt": 7.1,
+   "name": "ván ốp (kt thô)",
+   "thick": 7,
+   "width": 840,
+   "length": 2173,
+   "qty": 2,
+   "material": "WPB 1M LAM 7391NT - 6x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 1.2263638806772372,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 19.165860000000002,
+   "pldg": null
+  }
+ },
+ {
+  "row": 43,
+  "input": {
+   "stt": 7.2,
+   "name": "xương đứng",
+   "thick": 24,
+   "width": 60,
+   "length": 2173,
+   "qty": 2,
+   "material": "Ván gỗ ghép tràm CC - 24x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.08759742004837409,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 4.69368,
+   "pldg": null
+  }
+ },
+ {
+  "row": 44,
+  "input": {
+   "stt": 7.3,
+   "name": "xương ngang",
+   "thick": 24,
+   "width": 60,
+   "length": 720,
+   "qty": 2,
+   "material": "Ván gỗ ghép tràm CC - 24x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.02902445579145391,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 1.5552000000000001,
+   "pldg": null
+  }
+ },
+ {
+  "row": 45,
+  "input": {
+   "stt": 7.4,
+   "name": "xương ngang",
+   "thick": 25,
+   "width": 24,
+   "length": 720,
+   "qty": 6,
+   "material": "PB - 25x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.03482934694974469,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 1.9440000000000002,
+   "pldg": null
+  }
+ },
+ {
+  "row": 46,
+  "input": {
+   "stt": 7.5,
+   "name": "Xương đứng trên",
+   "thick": 25,
+   "width": 24,
+   "length": 424,
+   "qty": 2,
+   "material": "PB - 25x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.006836871808653588,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.3816,
+   "pldg": null
+  }
+ },
+ {
+  "row": 47,
+  "input": {
+   "stt": 7.6,
+   "name": "xương đứng giữa",
+   "thick": 25,
+   "width": 24,
+   "length": 330,
+   "qty": 7,
+   "material": "PB - 25x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.018624025799516258,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 1.0395,
+   "pldg": null
+  }
+ },
+ {
+  "row": 48,
+  "input": {
+   "stt": 7.7,
+   "name": "xương đứng dưới",
+   "thick": 25,
+   "width": 24,
+   "length": 363,
+   "qty": 2,
+   "material": "PB - 25x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.0058532652512765385,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 0.3267,
+   "pldg": null
+  }
+ },
+ {
+  "row": 49,
+  "input": {
+   "stt": 7.8,
+   "name": "Lõi trên",
+   "thick": 24,
+   "width": 345.5,
+   "length": 422,
+   "qty": 4,
+   "material": "Giấy tổ ong - 24x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.19591642031711906,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 10.497672000000001,
+   "pldg": null
+  }
+ },
+ {
+  "row": 50,
+  "input": {
+   "stt": 7.9,
+   "name": "Lõi giữa",
+   "thick": 24,
+   "width": 271,
+   "length": 328,
+   "qty": 2,
+   "material": "Giấy tổ ong - 24x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.05972050524052674,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 3.199968,
+   "pldg": null
+  }
+ },
+ {
+  "row": 51,
+  "input": {
+   "stt": 7.1,
+   "name": "Lõi dưới",
+   "thick": 24,
+   "width": 345.5,
+   "length": 361,
+   "qty": 4,
+   "material": "Giấy tổ ong - 24x1220x2440 (mm)",
+   "edgeCode": null,
+   "edges": null,
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": "",
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.1675967481859715,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 8.980236,
+   "pldg": null
+  }
+ }
+]

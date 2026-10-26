@@ -1,0 +1,380 @@
+[
+ {
+  "row": 13,
+  "input": {
+   "stt": 1,
+   "name": "MODULE MD1",
+   "thick": 800,
+   "width": 800,
+   "length": 1400,
+   "qty": 1,
+   "material": "",
+   "edgeCode": "",
+   "edges": "",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": "HOÀN THIỆN ĐI MODULE"
+  },
+  "expected": {
+   "unit": null,
+   "mass": 0,
+   "edgeLen": 0,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 672,
+   "pldg": 1
+  }
+ },
+ {
+  "row": 14,
+  "input": {
+   "stt": 1.1,
+   "name": "hông bìa_01_001",
+   "thick": 18,
+   "width": 114,
+   "length": 798,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 18x1220x2440 (mm)",
+   "edgeCode": "",
+   "edges": "",
+   "finishCode": "CS-01",
+   "faces": "2m0d2r",
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.03056033324375168,
+   "edgeLen": 0,
+   "areaFinish": 0.186048,
+   "areaPrime": 0,
+   "weight": 1.228122,
+   "pldg": null
+  }
+ },
+ {
+  "row": 15,
+  "input": {
+   "stt": 1.2,
+   "name": "hông bìa_01_002",
+   "thick": 18,
+   "width": 114,
+   "length": 798,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 18x1220x2440 (mm)",
+   "edgeCode": "",
+   "edges": "",
+   "finishCode": "CS-01",
+   "faces": "2m0d2r",
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.03056033324375168,
+   "edgeLen": 0,
+   "areaFinish": 0.186048,
+   "areaPrime": 0,
+   "weight": 1.16964,
+   "pldg": null
+  }
+ },
+ {
+  "row": 16,
+  "input": {
+   "stt": 1.3,
+   "name": "hông giữa_01_003",
+   "thick": 18,
+   "width": 114,
+   "length": 760,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 18x1220x2440 (mm)",
+   "edgeCode": "",
+   "edges": "",
+   "finishCode": "CS-01",
+   "faces": "2m0d1r",
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.029105079279763503,
+   "edgeLen": 0,
+   "areaFinish": 0.175332,
+   "areaPrime": 0,
+   "weight": null,
+   "pldg": null
+  }
+ },
+ {
+  "row": 17,
+  "input": {
+   "stt": 1.4,
+   "name": "nóc_01_004",
+   "thick": 18,
+   "width": 800,
+   "length": 1400,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 18x1220x2440 (mm)",
+   "edgeCode": "",
+   "edges": "",
+   "finishCode": "CS-01",
+   "faces": "2m2d2r",
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.37624294544477294,
+   "edgeLen": 0,
+   "areaFinish": 2.3192,
+   "areaPrime": 0,
+   "weight": 15.120000000000001,
+   "pldg": null
+  }
+ },
+ {
+  "row": 18,
+  "input": {
+   "stt": 1.5,
+   "name": "đáy_01_005",
+   "thick": 18,
+   "width": 800,
+   "length": 1400,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 18x1220x2440 (mm)",
+   "edgeCode": "",
+   "edges": "",
+   "finishCode": "CS-01",
+   "faces": "2m2d2r",
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.37624294544477294,
+   "edgeLen": 0,
+   "areaFinish": 2.3192,
+   "areaPrime": 0,
+   "weight": 15.120000000000001,
+   "pldg": null
+  }
+ },
+ {
+  "row": 19,
+  "input": {
+   "stt": 1.6,
+   "name": "hậu_01_006",
+   "thick": 18,
+   "width": 114,
+   "length": 964,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 18x1220x2440 (mm)",
+   "edgeCode": "",
+   "edges": "",
+   "finishCode": "CS-01",
+   "faces": "2m0d0r",
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.036917495296963185,
+   "edgeLen": 0,
+   "areaFinish": 0.219792,
+   "areaPrime": 0,
+   "weight": 1.483596,
+   "pldg": null
+  }
+ },
+ {
+  "row": 20,
+  "input": {
+   "stt": 1.7,
+   "name": "mặt hk_01_007",
+   "thick": 17,
+   "width": 110,
+   "length": 479,
+   "qty": 2,
+   "material": "MDF HMR E1 2M MEL MS 101T - 17x1220x2440 (mm)",
+   "edgeCode": "Chỉ nhựa MS 101T - 0.8x21 (mm)",
+   "edges": "2d2r",
+   "finishCode": null,
+   "faces": null,
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.035400429991937654,
+   "edgeLen": 2.356,
+   "areaFinish": 0,
+   "areaPrime": 0,
+   "weight": 1.343595,
+   "pldg": null
+  }
+ },
+ {
+  "row": 21,
+  "input": {
+   "stt": 1.8,
+   "name": "thành trái hk_01_008",
+   "thick": 12,
+   "width": 97,
+   "length": 450,
+   "qty": 2,
+   "material": "Ván gỗ ghép cao su AB - 12x1220x2440 (mm)",
+   "edgeCode": "",
+   "edges": "",
+   "finishCode": "CS-01",
+   "faces": "2m2d1r",
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.029326793872614887,
+   "edgeLen": 0,
+   "areaFinish": 0.198528,
+   "areaPrime": 0,
+   "weight": 0.7857000000000001,
+   "pldg": null
+  }
+ },
+ {
+  "row": 22,
+  "input": {
+   "stt": 1.9,
+   "name": "thành phải hk_01_009",
+   "thick": 12,
+   "width": 97,
+   "length": 450,
+   "qty": 2,
+   "material": "Ván gỗ ghép cao su AB - 12x1220x2440 (mm)",
+   "edgeCode": "",
+   "edges": "",
+   "finishCode": "CS-01",
+   "faces": "2m2d1r",
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.029326793872614887,
+   "edgeLen": 0,
+   "areaFinish": 0.198528,
+   "areaPrime": 0,
+   "weight": 0.7857000000000001,
+   "pldg": null
+  }
+ },
+ {
+  "row": 23,
+  "input": {
+   "stt": 1.1,
+   "name": "thành sau hk_01_010",
+   "thick": 12,
+   "width": 74,
+   "length": 423,
+   "qty": 2,
+   "material": "Ván gỗ ghép cao su AB - 12x1220x2440 (mm)",
+   "edgeCode": "",
+   "edges": "",
+   "finishCode": "CS-01",
+   "faces": "2m2d0r",
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.021030636925557646,
+   "edgeLen": 0,
+   "areaFinish": 0.145512,
+   "areaPrime": 0,
+   "weight": 0.563436,
+   "pldg": null
+  }
+ },
+ {
+  "row": 24,
+  "input": {
+   "stt": 1.11,
+   "name": "thành trước hk_01_011",
+   "thick": 12,
+   "width": 74,
+   "length": 423,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 12x1220x2440 (mm)",
+   "edgeCode": "",
+   "edges": "",
+   "finishCode": "CS-01",
+   "faces": "2m2d0r",
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.010515318462778823,
+   "edgeLen": 0,
+   "areaFinish": 0.072756,
+   "areaPrime": 0,
+   "weight": 0.281718,
+   "pldg": null
+  }
+ },
+ {
+  "row": 25,
+  "input": {
+   "stt": 1.12,
+   "name": "đáy hk_01_012",
+   "thick": 12,
+   "width": 450,
+   "length": 433,
+   "qty": 2,
+   "material": "Ván gỗ ghép cao su AB - 12x1220x2440 (mm)",
+   "edgeCode": "",
+   "edges": "",
+   "finishCode": "CS-01",
+   "faces": "2m1d0r",
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.13091238914270356,
+   "edgeLen": 0,
+   "areaFinish": 0.7897919999999999,
+   "areaPrime": 0,
+   "weight": 3.5073000000000003,
+   "pldg": null
+  }
+ },
+ {
+  "row": 26,
+  "input": {
+   "stt": 1.13,
+   "name": "thành trước hk_01_013",
+   "thick": 12,
+   "width": 74,
+   "length": 423,
+   "qty": 1,
+   "material": "Ván gỗ ghép cao su AB - 12x1220x2440 (mm)",
+   "edgeCode": "",
+   "edges": "",
+   "finishCode": "CS-01",
+   "faces": "2m2d0r",
+   "primeFaces": null,
+   "delivery": null
+  },
+  "expected": {
+   "unit": "Tấm",
+   "mass": 0.010515318462778823,
+   "edgeLen": 0,
+   "areaFinish": 0.072756,
+   "areaPrime": 0,
+   "weight": 0.281718,
+   "pldg": null
+  }
+ }
+]

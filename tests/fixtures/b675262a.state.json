@@ -1,0 +1,491 @@
+{
+ "header": {
+  "project": "SYCAMORE",
+  "order": "2511_SYCAMORE_CT01",
+  "name": "CỬA TOILET KHUYẾT TẬT KHU VỰC COMMON: 1 CÁNH MỞ",
+  "size": "Theo bản vẽ",
+  "code": "DH115b.215",
+  "qty": "1 Hệ",
+  "muc": "2.1",
+  "structure": "Theo module và giao rời",
+  "material": "Cửa đi 1 cánh, khung bao gỗ, cốt cánh WPB\n- Khung xương gỗ tràm, lõi Giấy tổ ong",
+  "slsp": 3,
+  "doorType": null,
+  "finishCodes": [
+   "LA-C1"
+  ]
+ },
+ "partsA": [
+  {
+   "stt": "1",
+   "name": "KHUNG BAO ĐỨNG",
+   "thick": 37,
+   "width": 215,
+   "length": 2200,
+   "qty": 2,
+   "material": "_",
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x43 (mm)",
+   "edges": "2d0r",
+   "primeFaces": "0m0d2r",
+   "delivery": "Vát 45 độ 01 đầu. \nCắt ra từ tổ hợp ghép tấm 1220x2440 7mm 1M Laminate với 30mm gỗ ghép tràm"
+  },
+  {
+   "stt": "1.1",
+   "name": "xương",
+   "thick": 30,
+   "width": 215,
+   "length": 2220,
+   "qty": 2,
+   "material": "Ván gỗ ghép tràm CC - 30x1220x2440 (mm)"
+  },
+  {
+   "stt": "1.2",
+   "name": "ván ốp",
+   "thick": 7,
+   "width": 215,
+   "length": 2220,
+   "qty": 2,
+   "material": "WPB 1M LAM 7391NT - 6x1220x2440 (mm)"
+  },
+  {
+   "stt": "2",
+   "name": "KHUNG BAO NGANG",
+   "thick": 37,
+   "width": 215,
+   "length": 900,
+   "qty": 1,
+   "material": "_",
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x43 (mm)",
+   "edges": "2d0r",
+   "primeFaces": "0m0d2r",
+   "delivery": "Vát 45 độ 02 đầu.\nCắt ra từ tổ hợp ghép tấm 1220x2440 7mm 1M Laminate với 30mm gỗ ghép tràm"
+  },
+  {
+   "stt": "2.1",
+   "name": "xương",
+   "thick": 30,
+   "width": 215,
+   "length": 920,
+   "qty": 1,
+   "material": "Ván gỗ ghép tràm CC - 30x1220x2440 (mm)"
+  },
+  {
+   "stt": "2.2",
+   "name": "ván ốp",
+   "thick": 7,
+   "width": 215,
+   "length": 920,
+   "qty": 1,
+   "material": "WPB 1M LAM 7391NT - 6x1220x2440 (mm)"
+  },
+  {
+   "stt": "3",
+   "name": "REBATE ĐỨNG",
+   "thick": 22,
+   "width": 158,
+   "length": 2169,
+   "qty": 2,
+   "material": "_",
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "delivery": "Vát 45 độ 01 đầu"
+  },
+  {
+   "stt": "3.1",
+   "name": "ván ốp",
+   "thick": 16,
+   "width": 158,
+   "length": 2189,
+   "qty": 2,
+   "material": "WPB 1M LAM 7391NT - 15x1220x2440 (mm)"
+  },
+  {
+   "stt": "3.2",
+   "name": "nền",
+   "thick": 6,
+   "width": 138,
+   "length": 2189,
+   "qty": 2,
+   "material": "WPB - 6x1220x2440 (mm)"
+  },
+  {
+   "stt": "4",
+   "name": "REBATE NGANG",
+   "thick": 22,
+   "width": 158,
+   "length": 838,
+   "qty": 1,
+   "material": "_",
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "delivery": "Vát 45 độ 02 đầu"
+  },
+  {
+   "stt": "4.1",
+   "name": "ván ốp",
+   "thick": 16,
+   "width": 158,
+   "length": 858,
+   "qty": 1,
+   "material": "WPB 1M LAM 7391NT - 15x1220x2440 (mm)"
+  },
+  {
+   "stt": "4.2",
+   "name": "nền",
+   "thick": 6,
+   "width": 138,
+   "length": 858,
+   "qty": 1,
+   "material": "WPB - 6x1220x2440 (mm)"
+  },
+  {
+   "stt": "5",
+   "name": "CỤM CHỈ KHUNG BAO (TOILET)",
+   "thick": 57,
+   "width": 50,
+   "length": 2248,
+   "qty": 1,
+   "material": "_"
+  },
+  {
+   "stt": "5.1",
+   "name": "Chỉ khung bao đứng 1",
+   "thick": 22,
+   "width": 50,
+   "length": 2248,
+   "qty": 1,
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "delivery": "Vát 45 độ 01 đầu"
+  },
+  {
+   "stt": "5.1.1",
+   "name": "Panel",
+   "thick": 13,
+   "width": 50,
+   "length": 2268,
+   "qty": 1,
+   "material": "WPB 1M LAM 7391NT - 13x1220x2440 (mm)"
+  },
+  {
+   "stt": "5.1.2",
+   "name": "Viền",
+   "thick": 9,
+   "width": 9,
+   "length": 2248,
+   "qty": 1,
+   "material": "WPB - 9x1220x2440 (mm)"
+  },
+  {
+   "stt": "5.2",
+   "name": "ChỈ khung bao đứng 2",
+   "thick": 13,
+   "width": 50,
+   "length": 2248,
+   "qty": 1,
+   "delivery": "Vát 45 độ 01 đầu"
+  },
+  {
+   "stt": "5.2.1",
+   "name": "Panel",
+   "thick": 13,
+   "width": 50,
+   "length": 2268,
+   "qty": 1,
+   "material": "WPB 1M LAM 7391NT - 13x1220x2440 (mm)",
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x21 (mm)",
+   "edges": "2d0r"
+  },
+  {
+   "stt": "5.3",
+   "name": "Chỉ khung bao ngang",
+   "thick": 22,
+   "width": 50,
+   "length": 956,
+   "qty": 1,
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "delivery": "Vát 45 độ 02 đầu"
+  },
+  {
+   "stt": "5.3.1",
+   "name": "Panel",
+   "thick": 13,
+   "width": 50,
+   "length": 976,
+   "qty": 1,
+   "material": "WPB 1M LAM 7391NT - 13x1220x2440 (mm)"
+  },
+  {
+   "stt": "5.3.2",
+   "name": "Viền",
+   "thick": 9,
+   "width": 9,
+   "length": 976,
+   "qty": 1,
+   "material": "WPB - 9x1220x2440 (mm)"
+  },
+  {
+   "stt": "6",
+   "name": "CỤM CHỈ KHUNG BAO (PUBLIC)",
+   "thick": 66,
+   "width": 50,
+   "length": 2228,
+   "qty": 1
+  },
+  {
+   "stt": "6.1",
+   "name": "Chỉ khung bao đứng",
+   "thick": 22,
+   "width": 50,
+   "length": 2228,
+   "qty": 2,
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "delivery": "Vát 45 độ 01 đầu"
+  },
+  {
+   "stt": "6.1.1",
+   "name": "Panel",
+   "thick": 13,
+   "width": 50,
+   "length": 2248,
+   "qty": 2,
+   "material": "WPB 1M LAM 7391NT - 13x1220x2440 (mm)"
+  },
+  {
+   "stt": "6.1.2",
+   "name": "Viền",
+   "thick": 9,
+   "width": 9,
+   "length": 2248,
+   "qty": 2,
+   "material": "WPB - 9x1220x2440 (mm)"
+  },
+  {
+   "stt": "6.2",
+   "name": "Chỉ khung bao ngang",
+   "thick": 22,
+   "width": 50,
+   "length": 956,
+   "qty": 1,
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x28 (mm)",
+   "edges": "2d0r",
+   "delivery": "Vát 45 độ 02 đầu"
+  },
+  {
+   "stt": "6.2.1",
+   "name": "Panel",
+   "thick": 13,
+   "width": 50,
+   "length": 976,
+   "qty": 1,
+   "material": "WPB 1M LAM 7391NT - 13x1220x2440 (mm)"
+  },
+  {
+   "stt": "6.2.2",
+   "name": "Viền",
+   "thick": 9,
+   "width": 9,
+   "length": 976,
+   "qty": 1,
+   "material": "WPB - 9x1220x2440 (mm)"
+  },
+  {
+   "stt": "7",
+   "name": "CÁNH",
+   "thick": 38,
+   "width": 820,
+   "length": 2153,
+   "qty": 1,
+   "material": "_",
+   "edgeCode": "Chỉ nhựa 7391NT - 0.8x43 (mm)",
+   "edges": "2d2r"
+  },
+  {
+   "stt": "7.1",
+   "name": "ván ốp (kt thô)",
+   "thick": 7,
+   "width": 840,
+   "length": 2173,
+   "qty": 2,
+   "material": "WPB 1M LAM 7391NT - 6x1220x2440 (mm)"
+  },
+  {
+   "stt": "7.2",
+   "name": "xương đứng",
+   "thick": 24,
+   "width": 60,
+   "length": 2173,
+   "qty": 2,
+   "material": "Ván gỗ ghép tràm CC - 24x1220x2440 (mm)"
+  },
+  {
+   "stt": "7.3",
+   "name": "xương ngang",
+   "thick": 24,
+   "width": 60,
+   "length": 720,
+   "qty": 2,
+   "material": "Ván gỗ ghép tràm CC - 24x1220x2440 (mm)"
+  },
+  {
+   "stt": "7.4",
+   "name": "xương ngang",
+   "thick": 25,
+   "width": 24,
+   "length": 720,
+   "qty": 6,
+   "material": "PB - 25x1220x2440 (mm)"
+  },
+  {
+   "stt": "7.5",
+   "name": "Xương đứng trên",
+   "thick": 25,
+   "width": 24,
+   "length": 424,
+   "qty": 2,
+   "material": "PB - 25x1220x2440 (mm)"
+  },
+  {
+   "stt": "7.6",
+   "name": "xương đứng giữa",
+   "thick": 25,
+   "width": 24,
+   "length": 330,
+   "qty": 7,
+   "material": "PB - 25x1220x2440 (mm)"
+  },
+  {
+   "stt": "7.7",
+   "name": "xương đứng dưới",
+   "thick": 25,
+   "width": 24,
+   "length": 363,
+   "qty": 2,
+   "material": "PB - 25x1220x2440 (mm)"
+  },
+  {
+   "stt": "7.8",
+   "name": "Lõi trên",
+   "thick": 24,
+   "width": 345.5,
+   "length": 422,
+   "qty": 4,
+   "material": "Giấy tổ ong - 24x1220x2440 (mm)"
+  },
+  {
+   "stt": "7.9",
+   "name": "Lõi giữa",
+   "thick": 24,
+   "width": 271,
+   "length": 328,
+   "qty": 2,
+   "material": "Giấy tổ ong - 24x1220x2440 (mm)"
+  },
+  {
+   "stt": "7.1",
+   "name": "Lõi dưới",
+   "thick": 24,
+   "width": 345.5,
+   "length": 361,
+   "qty": 4,
+   "material": "Giấy tổ ong - 24x1220x2440 (mm)"
+  }
+ ],
+ "partsB": [],
+ "partsC": [],
+ "sign": {
+  "dateText": "Ngày 10 tháng 8 năm 2026",
+  "approver": "Đỗ Hồng Thái",
+  "author": "Võ Thị Thúy Hằng"
+ },
+ "supplies": {
+  "metal": [],
+  "metalWork": [],
+  "aux": [
+   {
+    "code": "NVL22-000042",
+    "name": "Keo Cosmo 125.130",
+    "unit": "Kg",
+    "qtyFactory": 0.5
+   },
+   {
+    "code": "NVL10-000062",
+    "name": "Đinh U1013J - 5000 cây/hộp",
+    "unit": "Hộp",
+    "spec": "5000 Cây/Hộp",
+    "qtyFactory": 0.1
+   },
+   {
+    "code": "NVL10-000046",
+    "name": "Đinh F20 - 5000 cây/hộp",
+    "unit": "Hộp",
+    "spec": "5000 Cây/Hộp",
+    "qtyFactory": 0.1
+   },
+   {
+    "code": "NVL10-000048",
+    "name": "Đinh F30 - 5000 cây/hộp",
+    "unit": "Hộp",
+    "spec": "5000 Cây/Hộp",
+    "qtyFactory": 0.1
+   },
+   {
+    "code": "NVL7-000279",
+    "name": "Chốt gỗ - Ø10x40 (mm)",
+    "unit": "Con",
+    "spec": "Ø10x40",
+    "material": "Gỗ tự nhiên",
+    "qtySite": 4
+   },
+   {
+    "code": "NVL7-000475",
+    "name": "Vis gỗ LGC đầu dẹt - M6x70 (mm) thép xi trắng",
+    "unit": "Con",
+    "spec": "M6x70x13",
+    "material": "Thép xi trắng",
+    "qtySite": 4
+   },
+   {
+    "code": "NVL6-000125",
+    "name": "Keo Soudafoam Gun B3 - 720ml/chai",
+    "unit": "Chai",
+    "spec": "720ml/chai",
+    "qtySite": 0.666667
+   },
+   {
+    "code": "NVL7-000307",
+    "name": "Tắc kê nhựa + Vis 10x100 (mm)",
+    "unit": "Bộ",
+    "spec": "M10x100",
+    "material": "Nhựa xám + 7 màu",
+    "qtySite": 22
+   }
+  ],
+  "accessories": [
+   {
+    "name": "Bộ phụ kiện cửa (theo thực tế)",
+    "unit": "Bộ",
+    "qtyFactory": 1,
+    "note": "Trọn bộ phụ kiện cửa, theo danh sách thực tế công trình gửi về"
+   }
+  ],
+  "subcon": [
+   {
+    "code": "Kiểm duyệt",
+    "qtyFactory": "Người Lập"
+   },
+   {
+    "code": "Đỗ Hồng Thái",
+    "qtyFactory": "Võ Thị Thúy Hằng"
+   }
+  ]
+ },
+ "phieu": {
+  "history": []
+ },
+ "packaging": {
+  "standard": "XK_CHUẨN 2"
+ }
+}

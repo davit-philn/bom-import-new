@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Khai BOM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="brand">Khai BOM <small>BM02-QT03-NM</small></div>
+  <div class="actions">
+    <button id="btnNew" title="Tạo BOM trống">Mới</button>
+    <button id="btnOpenXlsm" title="Nạp file BOM Excel đang dùng">Mở file Excel…</button>
+    <button id="btnOpenDraft">Mở nháp…</button>
+    <button id="btnSaveDraft">Lưu nháp</button>
+    <button id="btnCheck">Kiểm tra</button>
+    <button id="btnExport" class="primary">Xuất Excel (.xlsm)</button>
+    <input type="file" id="fileXlsm" accept=".xlsm,.xlsx" hidden>
+    <input type="file" id="fileDraft" accept=".json" hidden>
+  </div>
+</header>
+<nav class="tabs" id="tabs"></nav>
+<div id="issues" class="issues" hidden></div>
+<main id="view"></main>
+<div id="toast" class="toast" hidden></div>
+<div id="lists"></div>
+<script src="calc.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
