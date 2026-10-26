@@ -1,0 +1,18 @@
+BOM web chạy tại http://localhost:8123
+127.0.0.1 - "GET / HTTP/1.1" 200 -
+127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - "GET /calc.js HTTP/1.1" 200 -
+127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - "GET /api/lists HTTP/1.1" 200 -
+127.0.0.1 - "POST /api/import HTTP/1.1" 200 -
+127.0.0.1 - "GET / HTTP/1.1" 200 -
+127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - "GET /calc.js HTTP/1.1" 200 -
+127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - "GET /api/lists HTTP/1.1" 200 -
+127.0.0.1 - "POST /api/import HTTP/1.1" 200 -
+127.0.0.1 - "GET / HTTP/1.1" 200 -
+127.0.0.1 - "GET /app.js HTTP/1.1" 200 -
+127.0.0.1 - "GET /calc.js HTTP/1.1" 200 -
+127.0.0.1 - "GET /style.css HTTP/1.1" 200 -
+127.0.0.1 - "GET /api/lists HTTP/1.1" 200 -

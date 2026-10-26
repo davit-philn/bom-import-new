@@ -69,3 +69,24 @@ table.plain { border-collapse: collapse; width: 100%; }
 table.plain th, table.plain td { border-bottom: 1px solid var(--line); padding: 6px 8px; text-align: left; vertical-align: top; }
 table.plain td.r, table.plain th.r { text-align: right; font-variant-numeric: tabular-nums; }
 @media (max-width: 700px) { main { padding: 10px; } .tabs { top: 96px; } }
+
+/* ---- khối thống nhất cho Phần I–V ---- */
+.block { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; margin-bottom: 14px; overflow: hidden; }
+.bhead { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: var(--head); border-bottom: 1px solid var(--line); }
+.block.closed .bhead { border-bottom: 0; }
+.bhead .tg { width: 24px; padding: 0; }
+.bhead .code { min-width: 24px; height: 24px; line-height: 24px; text-align: center; border-radius: 6px; background: var(--brand); color: var(--brand-ink); font-weight: 700; font-size: 12px; }
+.bhead .ttl { font-weight: 600; }
+.bhead .note, .bhead .cnt { color: var(--muted); font-size: 12px; }
+.bhead .sp { flex: 1; }
+.mode { font-size: 11px; padding: 1px 8px; border-radius: 99px; border: 1px solid var(--line); background: var(--panel); }
+.mode.in { border-color: var(--brand); color: var(--brand); }
+.mode.auto { background: var(--calc); color: var(--muted); }
+.mode.mix { border-color: var(--brand); color: var(--brand); background: linear-gradient(90deg, var(--panel) 50%, var(--calc) 50%); }
+.bbody { padding: 10px 12px; }
+.bbody .scroll { max-height: 70vh; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: center; padding: 6px 16px; font-size: 12px; color: var(--muted); background: var(--panel); border-bottom: 1px solid var(--line); }
+.legend i { display: inline-block; width: 14px; height: 14px; border: 1px solid var(--line); border-radius: 3px; vertical-align: -3px; margin-right: 5px; background: var(--panel); }
+.legend i.c { background: var(--calc); }
+.legend i.p { background: color-mix(in srgb, var(--brand) 9%, var(--panel)); }
+.legend i.b { background: var(--bad); }

@@ -14,7 +14,6 @@
   let lists = { materials: [], edgeCodes: [], supplyCatalog: {}, edges: [], faces: [], standards: [], delivery: [], structures: [], doorTypes: [], units: [] };
   let state = load() || emptyState();
   let tab = 'p1';
-  let partSection = 'partsA';
 
   // ---------- tiện ích ----------
   const $ = (s, el) => (el || document).querySelector(s);
@@ -34,7 +33,7 @@
     if (v === '' || v === null || v === undefined) return '';
     if (typeof v !== 'number') return String(v);
     if (!Number.isFinite(v)) return '';
-    return v.toLocaleString('vi-VN', { maximumFractionDigits: d === undefined ? 3 : d, useGrouping: false });
+    return v.toLocaleString('en-US', { maximumFractionDigits: d === undefined ? 3 : d, useGrouping: false });
   };
   function toast(msg, isErr) {
     const t = $('#toast');
@@ -107,7 +106,7 @@
       rows.forEach((row, r) => {
         const tr = h('tr', { 'data-row': r });
         tr.append(h('td', { class: 'no' }, String(r + 1) + ' ',
-          h('span', { class: 'rb' },
+          opt.readOnly ? null : h('span', { class: 'rb' },
             h('button', { class: 'small', title: 'Chèn dòng bên dưới', onclick: () => { rows.splice(r + 1, 0, (opt.blank || blankRow)()); changed(); render({ r: r + 1 }); } }, '+'),
             h('button', { class: 'small', title: 'Xóa dòng', onclick: () => { rows.splice(r, 1); if (!rows.length) rows.push((opt.blank || blankRow)()); changed(); render({ r: Math.max(0, r - 1) }); } }, '×'))));
         cols.forEach((c) => {
@@ -240,7 +239,7 @@
   function supplyColumns(key) {
     const num = (k, label, w) => ({ k, label, type: 'num', w, bad: numBad(k, label) });
     const cols = [
-      { k: 'code', label: 'Mã vật tư', list: 'dl-codes', w: 120 }, { k: 'name', label: 'Tên vật tư', w: 300 },
+      { k: 'code', label: 'Mã vật tư', list: 'dl-codes', w: 150 }, { k: 'name', label: 'Tên vật tư', w: 300 },
       { k: 'unit', label: 'ĐVT', list: 'dl-units', w: 60 }, { k: 'spec', label: 'Quy cách', w: 130 },
       { k: 'material', label: 'Chất liệu', w: 130 }, { k: 'supplier', label: 'NCC', w: 90 },
       num('qtyFactory', 'SL nhà máy', 78), num('qtySite', 'SL giao CT', 78), num('qtySub', 'SL giao TP', 78),
@@ -250,7 +249,33 @@
     return cols;
   }
 
-  // ---------- các tab ----------
+  // ---------- các tab (mọi Phần dùng cùng 1 kiểu: khối có thanh tiêu đề + lưới) ----------
+  const collapsed = {};
+  /* Khối thống nhất: thanh tiêu đề (mã nhóm, tên, số dòng, nút thêm dòng, thu gọn) + nội dung */
+  function Block(id, code, title, opt, body) {
+    opt = opt || {};
+    const isOpen = collapsed[id] === undefined ? !opt.startCollapsed : !collapsed[id];
+    const wrap = h('section', { class: 'block' + (isOpen ? '' : ' closed') });
+    const toggle = h('button', { class: 'small tg', title: 'Thu gọn / mở rộng', onclick: () => { collapsed[id] = isOpen; render(); } }, isOpen ? '▾' : '▸');
+    const bar = h('header', { class: 'bhead' }, toggle, code ? h('span', { class: 'code', text: code }) : null,
+      h('span', { class: 'ttl', text: title }), opt.note ? h('span', { class: 'note', text: opt.note }) : null,
+      h('span', { class: 'sp' }), opt.count !== undefined ? h('span', { class: 'cnt', text: opt.count }) : null,
+      opt.badge ? h('span', { class: 'mode ' + opt.badge[0], text: opt.badge[1] }) : null,
+      opt.add ? h('button', { class: 'small', onclick: opt.add }, '+ 5 dòng') : null);
+    wrap.append(bar);
+    if (isOpen) wrap.append(h('div', { class: 'bbody' }, body));
+    return wrap;
+  }
+  const BADGE_IN = ['in', 'nhập tay'], BADGE_AUTO = ['auto', 'tự tính'], BADGE_MIX = ['mix', 'nhập + tự tính'];
+  const calcCols = (defs) => defs.map(([k, label, w, opt]) => Object.assign({ k, label, w, type: 'calc' }, opt || {}));
+  // Lưới chỉ đọc (tự tính) dùng chính component Grid -> cùng giao diện với lưới nhập
+  function autoGrid(host, rows, defs) {
+    const cols = calcCols(defs).map((c) => Object.assign({}, c, { calc: (row) => (row[c.k] === undefined ? '' : row[c.k]) }));
+    return Grid(host, rows, cols, { readOnly: true });
+  }
+  const fill = (rows, n) => { while (rows.filter((r) => Object.keys(r).length).length === 0 && rows.length < n) rows.push({}); };
+  const addRows = (rows, n) => () => { for (let i = 0; i < (n || 5); i++) rows.push({}); touch(); render(); };
+
   function field(label, obj, k, opt) {
     opt = opt || {};
     const attrs = { type: 'text', value: obj[k] === undefined || obj[k] === null ? '' : obj[k] };
@@ -262,8 +287,8 @@
   }
 
   function viewP1(v) {
-    const hd = state.header;
-    v.append(h('div', { class: 'card' }, h('h2', {}, 'Thông tin sản phẩm', h('small', {}, 'nhập một lần – Phần II–V tự lấy lại')),
+    const hd = state.header, sg = state.sign;
+    v.append(Block('p1-info', '', 'Thông tin sản phẩm', { note: 'nhập một lần – Phần II–V tự lấy lại', badge: BADGE_IN },
       h('div', { class: 'form' },
         field('Dự án', hd, 'project'), field('Đơn hàng', hd, 'order'), field('Tên sản phẩm', hd, 'name'),
         field('Kích thước', hd, 'size'), field('Mã sản phẩm *', hd, 'code'), field('Số lượng (VD: 1 Hệ)', hd, 'qty'),
@@ -272,55 +297,49 @@
         field('Loại cửa', hd, 'doorType', { list: 'dl-doorTypes' }))));
     const fin = h('div', { class: 'form' });
     hd.finishCodes.forEach((_, i) => fin.append(field(`Mã hoàn thiện ${i + 1}`, hd.finishCodes, i, { after: renderLists })));
-    v.append(h('div', { class: 'card' }, h('h2', {}, 'Mã hoàn thiện', h('small', {}, 'dùng cho cột "Mã H.thiện" ở Phần II và ô "Hoàn thiện"')), fin));
-
+    v.append(Block('p1-fin', '', 'Mã hoàn thiện', { note: 'dùng cho cột "Mã H.thiện" ở Phần II', badge: BADGE_IN }, fin));
     const histHost = h('div');
     state.phieu.history = state.phieu.history.length ? state.phieu.history : [{}, {}, {}];
-    v.append(h('div', { class: 'card' }, h('h2', {}, 'Lịch sử thay đổi'), histHost));
+    v.append(Block('p1-hist', '', 'Lịch sử thay đổi', { badge: BADGE_IN, count: 'tối đa 6 dòng' }, histHost));
     Grid(histHost, state.phieu.history, [
       { k: 'no', label: 'STT', w: 50 }, { k: 'basis', label: 'Căn cứ', w: 120 }, { k: 'content', label: 'Nội dung thay đổi', w: 420 },
       { k: 'date', label: 'Ngày cập nhật', w: 120 }, { k: 'by', label: 'Người thực hiện', w: 180 },
     ], { maxRows: 6 });
-    const sg = state.sign;
-    const dateField = field('Ngày lập', sg, 'dateText');
-    v.append(h('div', { class: 'card' }, h('h2', {}, 'Ký duyệt'), h('div', { class: 'form' },
-      field('Kiểm duyệt', sg, 'approver'), field('Người lập', sg, 'author'), dateField),
-      h('p', {}, h('button', { class: 'small', onclick: () => { sg.dateText = today(); touch(); render(); } }, 'Điền ngày hôm nay'))));
+    v.append(Block('p1-sign', '', 'Ký duyệt', { badge: BADGE_IN },
+      h('div', {}, h('div', { class: 'form' }, field('Kiểm duyệt', sg, 'approver'), field('Người lập', sg, 'author'), field('Ngày lập', sg, 'dateText')),
+        h('p', {}, h('button', { class: 'small', onclick: () => { sg.dateText = today(); touch(); render(); } }, 'Điền ngày hôm nay')))));
   }
 
   function viewP2(v) {
-    const sub = h('div', { class: 'sub' });
-    SECTIONS.forEach(([k, label]) => sub.append(h('button', { class: k === partSection ? 'on' : '', onclick: () => { partSection = k; render(); } }, `${label} (${state[k].filter((r) => Object.keys(r).length).length})`)));
-    v.append(sub);
     const hd = state.header;
     v.append(h('div', { class: 'hint' }, `Sản phẩm: ${hd.code || '(chưa có mã)'} – Mục ${hd.muc || '?'} – SLSP ${hd.slsp || '?'}. Dán nhiều dòng từ Excel vào ô đầu tiên được. `
-      + 'Cột xám là tự tính. Dòng có PLDG = 1/2 (in đậm) là một kiện ở Phần IV; các dòng bên dưới là chi tiết con của kiện đó.'));
-    const host = h('div');
-    v.append(host);
-    if (!state[partSection].length) state[partSection].push({});
-    Grid(host, state[partSection], partColumns(partSection), {
-      parent: (row) => [1, 2].includes(C.partCalc(row, partSection).pldg) && !C.isBlank(row.name),
-      onChange: () => {},
+      + 'Dòng có PLDG = 1/2 (in đậm) là một kiện ở Phần IV; các dòng bên dưới là chi tiết con của kiện đó.'));
+    SECTIONS.forEach(([key, label]) => {
+      const rows = state[key], used = rows.filter((r) => Object.keys(r).length).length;
+      if (key === 'partsA') fill(rows, 12); else if (!rows.length) rows.push({});
+      const host = h('div');
+      v.append(Block('p2-' + key, label.slice(0, 1), label.slice(3), { count: `${used} dòng`, badge: BADGE_MIX, add: addRows(rows, 10), startCollapsed: key !== 'partsA' && !used }, host));
+      Grid(host, rows, partColumns(key), { parent: (row) => [1, 2].includes(C.partCalc(row, key).pldg) && !C.isBlank(row.name) });
     });
-    v.append(h('p', {}, h('button', { onclick: () => { for (let i = 0; i < 10; i++) state[partSection].push({}); touch(); render(); } }, '+ 10 dòng')));
   }
 
   function viewP3(v) {
     v.append(h('div', { class: 'hint' }, 'Nhập mã vật tư (VD NVL7-000279) – tên, ĐVT, quy cách tự điền nếu đã có trong danh mục. Số lượng chia theo nơi giao: nhà máy / giao công trình / giao thầu phụ.'));
-    const edge = C.edgeBandSummary({ partsA: state.partsA, partsB: state.partsB, partsC: state.partsC });
-    v.append(h('div', { class: 'card' }, h('h2', {}, 'A. Nhóm chỉ cạnh', h('small', {}, 'tự tổng hợp từ cột "Mã dán cạnh" và "Chỉ cạnh" của Phần II')),
-      edge.length ? h('table', { class: 'plain' }, h('thead', {}, h('tr', {}, h('th', { text: 'STT' }), h('th', { text: 'Tên vật tư' }), h('th', { text: 'ĐVT' }), h('th', { text: 'Quy cách' }), h('th', { class: 'r', text: 'Số lượng' }))),
-        h('tbody', {}, edge.map((e, i) => h('tr', {}, h('td', { text: i + 1 }), h('td', { text: e.name }), h('td', { text: e.unit }), h('td', { text: e.spec }), h('td', { class: 'r', text: fmt(e.qty, 3) })))))
-        : h('div', { class: 'hint' }, 'Chưa có chỉ cạnh – nhập "Mã dán cạnh" ở Phần II.')));
+    const edge = C.edgeBandSummary({ partsA: state.partsA, partsB: state.partsB, partsC: state.partsC })
+      .map((e, i) => ({ stt: i + 1, name: e.name, unit: e.unit, spec: e.spec, qty: e.qty }));
+    const eh = h('div');
+    v.append(Block('p3-edge', 'A', 'Nhóm chỉ cạnh', { note: 'tổng hợp từ "Mã dán cạnh" ở Phần II', count: `${edge.length} dòng`, badge: BADGE_AUTO }, eh));
+    autoGrid(eh, edge.length ? edge : [{}], [['stt', 'STT', 50], ['name', 'Tên vật tư', 300, { txt: true }], ['unit', 'ĐVT', 60, { txt: true }], ['spec', 'Quy cách', 130, { txt: true }], ['qty', 'Số lượng', 90, { d: 3 }]]);
     SUPPLY.forEach(([key, label]) => {
+      const rows = state.supplies[key];
+      fill(rows, 3);
       const host = h('div');
-      v.append(h('div', { class: 'card' }, h('h2', {}, label, h('small', {}, `${state.supplies[key].filter((r) => r.code || r.name).length} dòng`)), host,
-        h('p', {}, h('button', { class: 'small', onclick: () => { for (let i = 0; i < 5; i++) state.supplies[key].push({}); touch(); render(); } }, '+ 5 dòng'))));
-      if (!state.supplies[key].length) for (let i = 0; i < 3; i++) state.supplies[key].push({});
-      const g = Grid(host, state.supplies[key], supplyColumns(key), {
+      const code = label.split(' ')[0], name = label.slice(label.indexOf(' ') + 1);
+      v.append(Block('p3-' + key, code, name, { count: `${rows.filter((r) => r.code || r.name).length} dòng`, badge: BADGE_IN, add: addRows(rows, 5) }, host));
+      const g = Grid(host, rows, supplyColumns(key), {
         onChange: (r, k) => {
           if (k !== 'code') return;
-          const row = state.supplies[key][r], hit = lists.supplyCatalog[(row.code || '').trim()];
+          const row = rows[r], hit = lists.supplyCatalog[(row.code || '').trim()];
           if (!hit) return;
           let filled = false;
           Object.entries(hit).forEach(([f, val]) => { if (C.isBlank(row[f])) { row[f] = val; filled = true; } });
@@ -334,43 +353,40 @@
     const std = state.packaging.standard;
     const sel = h('select', {}, lists.standards.map((s) => h('option', { value: s, selected: s === std }, s)));
     sel.addEventListener('change', () => { state.packaging.standard = sel.value; touch(); render(); });
-    v.append(h('div', { class: 'card' }, h('div', { class: 'form' }, h('label', {}, 'Tiêu chuẩn bao bì', sel)),
-      h('p', { class: 'hint' }, 'Kích thước bao bì = kích thước tinh + phụ trội theo tiêu chuẩn. Kiện "giao rời" tự xếp lớp (thuật toán macro ToiUu_GiaoRoi). Kết quả cuối do file Excel tính lại khi mở.')));
+    v.append(Block('p4-std', '', 'Tiêu chuẩn bao bì', { badge: BADGE_IN, note: 'bao bì = kích thước tinh + phụ trội theo tiêu chuẩn' }, h('div', { class: 'form' }, h('label', {}, 'Tiêu chuẩn', sel))));
     const pk = C.packages(state.partsA, std);
-    if (!pk.length) { v.append(h('div', { class: 'card' }, 'Chưa có kiện nào. Ở Phần II đặt PLDG = 1 (đi module) hoặc 2 (giao rời), hoặc chọn "Ghi chú / giao hàng", cho dòng chi tiết cha.')); return; }
-    const rows = pk.map((p) => {
-      const warn = p.weight > 40;
-      const detail = p.nested
-        ? h('details', {}, h('summary', {}, `Xếp ${p.nested.layers} lớp, phôi ${fmt(p.nested.sheetW, 0)}×${fmt(p.nested.sheetH, 0)}`),
-          h('div', { class: 'hint' }, Object.entries(p.nested.perRow).map(([i, tag]) => `${tag}`).join(' | ')))
-        : (p.loose ? h('span', { class: 'pill warn' }, 'Giao rời – chưa có chi tiết con') : h('span', { class: 'pill' }, 'Đi module'));
-      const known = p.packThick !== undefined;
-      return h('tr', {}, h('td', { text: p.label }), h('td', { text: p.stt || '' }), h('td', { text: ` GÓI ${p.no}/${pk.length} ${p.name}` }),
-        h('td', { class: 'r', text: `${fmt(p.thick, 0)} × ${fmt(p.width, 0)} × ${fmt(p.length, 0)}` }), h('td', { class: 'r', text: fmt(p.qty, 0) }),
-        h('td', { class: 'r', text: known ? `${fmt(p.packThick, 0)} × ${fmt(p.packWidth, 0)} × ${fmt(p.packLength, 0)}` : '(Excel tính)' }),
-        h('td', { class: 'r' }, fmt(p.weight, 2), warn ? h('span', { class: 'pill bad', text: 'VƯỢT KL' }) : null), h('td', {}, detail));
-    });
-    v.append(h('div', { class: 'card' }, h('table', { class: 'plain' },
-      h('thead', {}, h('tr', {}, ['Kiện', 'STT', 'Tên', 'Tinh (D×R×D)', 'SL', 'Bao bì (D×R×D)', 'KL (kg)', 'Hình thức'].map((t, i) => h('th', { class: [3, 4, 5, 6].includes(i) ? 'r' : '', text: t })))),
-      h('tbody', {}, rows))));
+    const rows = pk.map((p) => ({
+      label: p.label, stt: p.stt || '', name: ` GÓI ${p.no}/${pk.length} ${p.name}`,
+      fine: `${fmt(p.thick, 0)} × ${fmt(p.width, 0)} × ${fmt(p.length, 0)}`, qty: p.qty,
+      pack: p.packThick !== undefined ? `${fmt(p.packThick, 0)} × ${fmt(p.packWidth, 0)} × ${fmt(p.packLength, 0)}` : '(Excel tính)',
+      kg: p.weight, flag: p.weight > 40 ? 'VƯỢT KL' : '',
+      how: p.nested ? `Giao rời – xếp ${p.nested.layers} lớp, phôi ${fmt(p.nested.sheetW, 0)}×${fmt(p.nested.sheetH, 0)}` : (p.loose ? 'Giao rời – chưa có chi tiết con' : 'Đi module'),
+    }));
+    const host = h('div');
+    v.append(Block('p4-list', '', 'Danh sách kiện', { note: 'mỗi dòng cha có PLDG = 1/2 ở Phần II là một kiện', count: `${rows.length} kiện`, badge: BADGE_AUTO }, host));
+    autoGrid(host, rows.length ? rows : [{}], [['label', 'Kiện', 80, { txt: true }], ['stt', 'STT', 50, { txt: true }], ['name', 'Tên', 280, { txt: true }],
+      ['fine', 'Tinh (D×R×D)', 130], ['qty', 'SL', 50, { d: 0 }], ['pack', 'Bao bì (D×R×D)', 140], ['kg', 'KL ước (kg)', 90, { d: 2 }], ['flag', 'Cảnh báo', 80, { txt: true }], ['how', 'Hình thức', 300, { txt: true }]]);
+    if (!rows.length) host.append(h('div', { class: 'hint' }, 'Chưa có kiện. Ở Phần II đặt PLDG = 1 (đi module) hoặc 2 (giao rời) cho dòng chi tiết cha.'));
   }
 
   function viewP5(v) {
     const std = state.packaging.standard;
     const pk = C.packages(state.partsA, std);
     const m = ['XK_CHUẨN 1', 'TIÊU CHUẨN DỰ ÁN'].includes(std) ? C.packagingMaterials(pk) : null;
-    v.append(h('div', { class: 'hint' }, `Tiêu chuẩn đang chọn: ${std}. Đây là bản xem trước; số liệu cuối cùng do file Excel tính.`));
+    v.append(h('div', { class: 'hint' }, `Tiêu chuẩn đang chọn: ${std} (đổi ở Phần IV). Phần này tự tính từ kích thước kiện; số liệu cuối cùng do file Excel tính khi mở.`));
     if (!m) {
-      v.append(h('div', { class: 'card' }, ['XK_CHUẨN 1', 'TIÊU CHUẨN DỰ ÁN'].includes(std) ? 'Chưa có kiện để tính vật tư đóng gói.' : 'Tiêu chuẩn này dùng bảng tính riêng trong file Excel (sheet ẩn) – sẽ được tính khi mở file.'));
+      v.append(Block('p5-none', '', 'Vật tư đóng gói', { badge: BADGE_AUTO }, h('div', { class: 'hint' },
+        ['XK_CHUẨN 1', 'TIÊU CHUẨN DỰ ÁN'].includes(std) ? 'Chưa có kiện để tính vật tư đóng gói.' : 'Tiêu chuẩn này dùng bảng tính riêng trong file Excel (sheet ẩn) – sẽ được tính khi mở file.')));
       return;
     }
-    v.append(h('div', { class: 'card' }, h('h2', {}, 'Kích thước kiện trung bình'),
-      h('div', { class: 'form' }, [['Dài', m.K6], ['Rộng', m.L6], ['Cao', m.M6], ['Tổng số kiện', m.K7]].map(([l, val]) => h('label', {}, l, h('input', { value: fmt(val, 1), readonly: true }))))));
-    v.append(h('div', { class: 'card' }, h('h2', {}, 'Vật tư đóng gói'), h('table', { class: 'plain' },
-      h('thead', {}, h('tr', {}, ['Tên', 'Vật tư', 'ĐVT', 'Dày', 'Rộng', 'Dài', 'SL', 'Khối lượng tinh'].map((t, i) => h('th', { class: i > 2 ? 'r' : '', text: t })))),
-      h('tbody', {}, m.items.map((it) => h('tr', {}, h('td', { text: it.name }), h('td', { text: it.material }), h('td', { text: it.unit }),
-        h('td', { class: 'r', text: fmt(it.t, 0) }), h('td', { class: 'r', text: fmt(it.w, 0) }), h('td', { class: 'r', text: fmt(it.l, 0) }),
-        h('td', { class: 'r', text: fmt(it.qty, 0) }), h('td', { class: 'r', text: fmt(it.total, 3) })))))));
+    const sh = h('div');
+    v.append(Block('p5-size', '', 'Kích thước kiện trung bình', { badge: BADGE_AUTO }, sh));
+    autoGrid(sh, [{ l: m.K6, w: m.L6, h: m.M6, n: m.K7 }], [['l', 'Dài', 90, { d: 1 }], ['w', 'Rộng', 90, { d: 1 }], ['h', 'Cao', 90, { d: 1 }], ['n', 'Tổng số kiện', 100, { d: 0 }]]);
+    const ih = h('div');
+    v.append(Block('p5-items', '', 'Vật tư đóng gói', { count: `${m.items.length} dòng`, badge: BADGE_AUTO }, ih));
+    autoGrid(ih, m.items.map((it) => ({ name: it.name, material: it.material, unit: it.unit, t: it.t, w: it.w, l: it.l, qty: it.qty, total: it.total })),
+      [['name', 'Tên', 200, { txt: true }], ['material', 'Vật tư', 300, { txt: true }], ['unit', 'ĐVT', 60, { txt: true }], ['t', 'Dày', 60, { d: 0 }], ['w', 'Rộng', 60, { d: 0 }],
+        ['l', 'Dài', 70, { d: 0 }], ['qty', 'SL', 60, { d: 0 }], ['total', 'Khối lượng tinh', 110, { d: 3 }]]);
   }
 
   const VIEWS = { p1: viewP1, p2: viewP2, p3: viewP3, p4: viewP4, p5: viewP5 };
@@ -486,7 +502,7 @@
       const res = await fetch('/api/import', { method: 'POST', body: await f.arrayBuffer() });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || res.statusText);
-      state = normalize(data); touch(); tab = 'p2'; partSection = 'partsA'; render(); toast(`Đã nạp ${f.name}`);
+      state = normalize(data); touch(); tab = 'p2'; render(); toast(`Đã nạp ${f.name}`);
     } catch (err) { toast('Không đọc được file: ' + err.message, true); }
   };
   window.addEventListener('beforeunload', () => { try { localStorage.setItem(STORE, JSON.stringify(state)); } catch (e) { /* bỏ qua */ } });
