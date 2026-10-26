@@ -156,52 +156,115 @@
     };
   }
 
-  // Phần IV: mỗi chi tiết cha có hình thức giao là một kiện; con = các dòng kế tiếp tới cha tiếp theo
-  function packages(parts, standard) {
+  const fold = (t) => String(t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd');
+  const isGiaoRoi = (note) => fold(note).includes('giao roi');
+
+  /* Phần IV (đúng công thức Excel): lấy các dòng Phần II (và gia công kim loại Phần III) có PLDG = 1 hoặc 2.
+     STT nguyên (không có dấu ".") = mở một KIỆN mới; STT thập phân (1.1, 1.2…) là chi tiết con nằm dưới kiện đó. */
+  function packages(parts, standard, extra) {
     const pad = PACK_PAD[standard];
-    const parents = [];
-    const isKien = (r) => !isBlank(r.name) && [1, 2].includes(partCalc(r, SECTION_A).pldg);
-    parts.forEach((r, i) => { if (isKien(r)) parents.push(i); });
     const stt = effectiveStt(parts);
-    return parents.map((i, k) => {
-      const r = parts[i];
-      const next = parents[k + 1] === undefined ? parts.length : parents[k + 1];
-      const children = parts.slice(i + 1, next).filter((c) => !isBlank(c.name));
-      const loose = partCalc(r, SECTION_A).pldg === 2;
-      const nested = loose ? nest(children) : null;
+    const entries = [];
+    parts.forEach((r, i) => {
+      if (!isBlank(r.name) && [1, 2].includes(partCalc(r, SECTION_A).pldg)) entries.push({ r, i, stt: stt[i] });
+    });
+    (extra || []).forEach((r, i) => {
+      const p = num(r.pldg);
+      if (!isBlank(r.name) && [1, 2].includes(p)) entries.push({ r: { name: r.name, thick: r.thick, width: r.width, length: r.length, qty: r.qty, pldg: p }, i: -1, stt: String(i + 1) });
+    });
+    const groups = [];
+    entries.forEach((e) => {
+      if (!String(e.stt).includes('.') || !groups.length) groups.push({ head: e, kids: [] });
+      else groups[groups.length - 1].kids.push(e);
+    });
+    return groups.map((g, k) => {
+      const r = g.head.r;
+      // chi tiết con dùng để xếp lớp: các dòng con có PLDG 1/2; nếu không có thì mọi dòng STT thập phân bên dưới
+      let kids = g.kids.map((e) => e.r);
+      let allKids = kids;
+      if (g.head.i >= 0) {
+        allKids = [];
+        for (let j = g.head.i + 1; j < parts.length; j++) {
+          if (!isBlank(parts[j].name) && !String(stt[j]).includes('.')) break;
+          if (!isBlank(parts[j].name)) allKids.push(parts[j]);
+        }
+        if (!kids.length) kids = allKids;
+      }
+      const loose = isGiaoRoi(r.delivery) || (partCalc(r, SECTION_A).pldg === 2 && isBlank(r.delivery));
+      const nested = loose ? nest(kids) : null;
       let K, L, M;
       if (nested) { K = nested.thick; L = nested.width; M = nested.length; }
       else if (pad) { K = num(r.thick) + pad[0]; L = num(r.width) + pad[1]; M = num(r.length) + pad[2]; }
-      const src = children.length ? children : [r];
+      const src = allKids.length ? allKids : [r];
       const kg = src.reduce((s, c) => s + num(c.thick) * num(c.width) * num(c.length) * num(c.qty) / 1e9 * 750, 0);
       return {
-        no: k + 1, label: 'KIỆN ' + (k + 1), stt: stt[i], name: r.name, loose, note: r.delivery,
+        no: k + 1, label: 'KIỆN ' + (k + 1), stt: g.head.stt, name: r.name, loose, note: r.delivery,
         thick: num(r.thick), width: num(r.width), length: num(r.length), qty: num(r.qty) || 1,
-        packThick: K, packWidth: L, packLength: M, nested, weight: kg, childCount: children.length,
+        packThick: K, packWidth: L, packLength: M, nested, weight: kg, childCount: kids.length,
       };
     });
   }
 
-  // Phần V (tiêu chuẩn XK_CHUẨN 1 mặc định của template): vật tư đóng gói từ kích thước kiện trung bình
-  function packagingMaterials(pkgs) {
+  // Phần V: vật tư đóng gói theo tiêu chuẩn (các sheet LOẠI x). XK_CHUẨN 1, 2 và TIÊU CHUẨN DỰ ÁN dùng chung 5 dòng; XK_CHUẨN 3 có 20 dòng.
+  const AREA = { thanh: (i) => (i.l * i.qty) / 2400, tam: (i) => (i.w * i.l * i.qty) / (1220 * 2440), tam1: (i) => (i.w * i.l * i.qty) / (2000 * 1000), tam2: (i) => (i.w * i.l * i.qty) / (1800 * 3100) };
+  function lineTotal(i) {
+    const u = fold(i.unit);
+    if (['cai', 'cum', 'he', 'con'].includes(u)) return i.qty;
+    if (AREA[u]) return AREA[u](i);
+    if (u === 'm2') return (i.w * i.l * i.qty) / 1e6;
+    if (u === 'm3') return (i.t * i.w * i.l * i.qty) / 1e9;
+    return 0;
+  }
+  const mx = (v) => Math.max(0, v);
+  function packagingMaterials(pkgs, standard) {
     const ok = pkgs.filter((p) => p.packLength !== undefined);
     if (!ok.length) return null;
     const avg = (f) => ok.reduce((s, p) => s + f(p), 0) / ok.length;
     const K6 = avg((p) => p.packLength), L6 = avg((p) => p.packWidth), M6 = avg((p) => p.packThick);
     const K7 = ok.reduce((s, p) => s + p.qty, 0);
     const area = (K6 * L6 * 4 + L6 * M6 * 2) * 1e-6;
-    const items = [
-      { name: 'V GẤP CẠNH TRÊN + DƯỚI', material: 'Giấy carton V gấp cạnh - 3x35x25x2400 (mm)', unit: 'THANH',
-        t: 25, w: 35, l: 2 * (K6 + L6), qty: 2 * K7 },
-      { name: 'V GẤP CẠNH ĐỨNG', material: 'Giấy carton V gấp cạnh - 3x35x25x2400 (mm)', unit: 'THANH',
-        t: 25, w: 35, l: Math.max(0, M6 - 70), qty: 4 * K7 },
+    const film = [
+      { name: 'Màng nhựa PE', material: 'Màng nhựa PE - 500 (mm)', unit: 'MD', total: area * 1.3 / 0.5 * K7 },
+      { name: 'PE FOAM', material: 'Màng EPE foam - 1x1200 (mm)', unit: 'MD', total: area * 1.3 / 1.2 * K7 },
     ];
-    items.forEach((i) => { i.total = (i.l * i.qty) / 2400; });
-    items.push({ name: 'Màng nhựa PE', material: 'Màng nhựa PE - 500 (mm)', unit: 'MD', total: area * 1.3 / 0.5 * K7 });
-    items.push({ name: 'PE FOAM', material: 'Màng EPE foam - 1x1200 (mm)', unit: 'MD', total: area * 1.3 / 1.2 * K7 });
-    items.push({ name: 'Băng keo', material: 'Băng keo trong 48 (mm)', unit: 'MD', total: (K6 * 2 + L6 * 2 + 200 * 16) * 1e-3 * K7 });
+    let items;
+    if (['XK_CHUẨN 1', 'XK_CHUẨN 2', 'TIÊU CHUẨN DỰ ÁN'].includes(standard)) {
+      items = [
+        { name: 'V GẤP CẠNH TRÊN + DƯỚI', material: 'Giấy carton V gấp cạnh - 3x35x25x2400 (mm)', unit: 'THANH', t: 25, w: 35, l: 2 * (K6 + L6), qty: 2 * K7 },
+        { name: 'V GẤP CẠNH ĐỨNG', material: 'Giấy carton V gấp cạnh - 3x35x25x2400 (mm)', unit: 'THANH', t: 25, w: 35, l: mx(M6 - 70), qty: 4 * K7 },
+      ];
+      items.forEach((i) => { i.total = lineTotal(i); });
+      items.push(...film, { name: 'Băng keo', material: 'Băng keo trong 48 (mm)', unit: 'MD', total: (K6 * 2 + L6 * 2 + 200 * 16) * 1e-3 * K7 });
+    } else if (standard === 'XK_CHUẨN 3') {
+      const X = 'Xốp tấm - 2000x1000x20 (mm)', V = 'Giấy carton 5 lớp - 1800x3100 (mm)';
+      const L = (name, material, unit, t, w, l, qty) => ({ name, material, unit, t, w, l, qty });
+      const r = [];
+      r[1] = L('Xốp tấm nóc', X, 'Tấm1', 20, mx(L6 - 200), mx(K6 - 200), 2 * K7);
+      r[2] = L('Xốp tấm hông', X, 'Tấm1', 20, mx(L6 - 200), mx(M6 - 100), 2 * K7);
+      r[3] = L('Xốp tấm mặt trước, mặt sau', X, 'Tấm1', 20, mx(K6 - 200), mx(M6 - 100), 2 * K7);
+      r[4] = L('V góc (Carton 5L) - ngoài', V, 'Tấm2', '', 100, 100, 24 * K7);
+      r[5] = L('Xốp góc', 'Xốp ke góc - 20x100x100x100 (mm)', 'Cái', 20, 100, 100, 8 * K7);
+      r[6] = L('V góc (Carton 5L) trong', V, 'Tấm2', '', r[4].w - r[5].t, r[4].l - r[5].t, 24 * K7);
+      r[7] = L('V cạnh đứng - ngoài', V, 'Tấm2', '', 100, mx(M6 - 200), 8 * K7);
+      r[8] = L('V xốp đứng', X, 'Tấm1', 20, 100, r[7].l, r[7].qty);
+      r[9] = L('V cạnh đứng - trong', V, 'Tấm2', '', r[8].w - r[8].t, r[8].l, r[8].qty);
+      r[10] = L('V cạnh ngang - ngoài', V, 'Tấm2', '', 100, mx(K6 - 200), 4 * K7);
+      r[11] = L('V xốp ngang', X, 'Tấm1', 20, r[10].w, r[10].l, r[10].qty);
+      r[12] = L('V cạnh ngang - trong', V, 'Tấm2', '', r[11].w - r[11].t, r[11].l, r[11].qty);
+      r[13] = L('V cạnh hông - ngoài', V, 'Tấm2', '', 100, mx(L6 - 200), 4 * K7);
+      r[14] = L('V xốp hông', X, 'Tấm1', 20, 100, r[13].l, r[13].qty);
+      r[15] = L('V cạnh hông - trong', V, 'Tấm2', '', r[14].w - r[14].t, r[14].l, r[13].qty);
+      r[16] = L('Thanh xốp đáy', X, 'Tấm1', 20, 20, L6 + 20, K7);
+      r[17] = L('PLYWOOD/ VÁN MDF', 'Plywood LVD E2 - 9x1220x2440 (mm) MDF Trơn tận dụng', 'Tấm', 9, L6, K6, 2 * K7);
+      items = r.slice(1);
+      items.forEach((i) => { i.total = lineTotal(i); });
+      items.push(...film);
+      const box = L('THÙNG BAO NGOÀI', V, 'Tấm', M6 + 50, L6 + 50, K6 + 50, K7);
+      box.total = ((box.l + box.w) * 2 * box.t * 1e-6) / (1800 * 3100 * 1e-6);
+      items.push(box);
+    } else return null;
     return { K6, L6, M6, K7, items };
   }
 
-  return { num, isBlank, count, partCalc, effectiveStt, edgeBandSummary, nest, packages, packagingMaterials, PACK_PAD };
+  return { num, isBlank, count, partCalc, effectiveStt, edgeBandSummary, nest, packages, packagingMaterials, isGiaoRoi, PACK_PAD };
 });

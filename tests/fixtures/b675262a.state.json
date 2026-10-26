@@ -27,7 +27,8 @@
    "edgeCode": "Chỉ nhựa 7391NT - 0.8x43 (mm)",
    "edges": "2d0r",
    "primeFaces": "0m0d2r",
-   "delivery": "Vát 45 độ 01 đầu. \nCắt ra từ tổ hợp ghép tấm 1220x2440 7mm 1M Laminate với 30mm gỗ ghép tràm"
+   "delivery": "Vát 45 độ 01 đầu. \nCắt ra từ tổ hợp ghép tấm 1220x2440 7mm 1M Laminate với 30mm gỗ ghép tràm",
+   "pldg": 1
   },
   {
    "stt": "1.1",
@@ -58,7 +59,8 @@
    "edgeCode": "Chỉ nhựa 7391NT - 0.8x43 (mm)",
    "edges": "2d0r",
    "primeFaces": "0m0d2r",
-   "delivery": "Vát 45 độ 02 đầu.\nCắt ra từ tổ hợp ghép tấm 1220x2440 7mm 1M Laminate với 30mm gỗ ghép tràm"
+   "delivery": "Vát 45 độ 02 đầu.\nCắt ra từ tổ hợp ghép tấm 1220x2440 7mm 1M Laminate với 30mm gỗ ghép tràm",
+   "pldg": 1
   },
   {
    "stt": "2.1",
@@ -88,7 +90,8 @@
    "material": "_",
    "edgeCode": "Chỉ nhựa 7391NT - 0.8x28 (mm)",
    "edges": "2d0r",
-   "delivery": "Vát 45 độ 01 đầu"
+   "delivery": "Vát 45 độ 01 đầu",
+   "pldg": 1
   },
   {
    "stt": "3.1",
@@ -118,7 +121,8 @@
    "material": "_",
    "edgeCode": "Chỉ nhựa 7391NT - 0.8x28 (mm)",
    "edges": "2d0r",
-   "delivery": "Vát 45 độ 02 đầu"
+   "delivery": "Vát 45 độ 02 đầu",
+   "pldg": 1
   },
   {
    "stt": "4.1",
@@ -145,7 +149,8 @@
    "width": 50,
    "length": 2248,
    "qty": 1,
-   "material": "_"
+   "material": "_",
+   "pldg": 2
   },
   {
    "stt": "5.1",
@@ -231,7 +236,8 @@
    "thick": 66,
    "width": 50,
    "length": 2228,
-   "qty": 1
+   "qty": 1,
+   "pldg": 2
   },
   {
    "stt": "6.1",
@@ -300,7 +306,8 @@
    "qty": 1,
    "material": "_",
    "edgeCode": "Chỉ nhựa 7391NT - 0.8x43 (mm)",
-   "edges": "2d2r"
+   "edges": "2d2r",
+   "pldg": 1
   },
   {
    "stt": "7.1",
@@ -471,16 +478,7 @@
     "note": "Trọn bộ phụ kiện cửa, theo danh sách thực tế công trình gửi về"
    }
   ],
-  "subcon": [
-   {
-    "code": "Kiểm duyệt",
-    "qtyFactory": "Người Lập"
-   },
-   {
-    "code": "Đỗ Hồng Thái",
-    "qtyFactory": "Võ Thị Thúy Hằng"
-   }
-  ]
+  "subcon": []
  },
  "phieu": {
   "history": []

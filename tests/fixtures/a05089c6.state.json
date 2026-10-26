@@ -445,16 +445,7 @@
     "note": "CÔNG TRÌNH CẤP"
    }
   ],
-  "subcon": [
-   {
-    "code": "Kiểm duyệt",
-    "qtySub": "Người Lập"
-   },
-   {
-    "code": "Đỗ Hồng Thái",
-    "qtySub": "Phạm Thanh Huy"
-   }
-  ]
+  "subcon": []
  },
  "phieu": {
   "history": []

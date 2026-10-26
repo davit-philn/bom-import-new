@@ -25,4 +25,25 @@ for (const f of fs.readdirSync(dir).filter((x) => x.startsWith('expected_'))) {
   }
 }
 console.log(`${total - fail}/${total} ô khớp`);
-process.exit(fail ? 1 : 0);
+
+// ---- Phần IV: số kiện phải bằng số dòng "KIỆN n" Excel tính (đếm từ cache của 3 file mẫu) ----
+const EXPECT_KIEN = { f1f022cd: 1, b675262a: 7, a05089c6: 9 };
+let kfail = 0;
+for (const [id, n] of Object.entries(EXPECT_KIEN)) {
+  const st = JSON.parse(fs.readFileSync(path.join(dir, id + '.state.json'), 'utf8'));
+  const pk = Calc.packages(st.partsA, st.packaging.standard, st.supplies.metalWork);
+  const ok = pk.length === n;
+  if (!ok) kfail++;
+  console.log(ok ? 'OK ' : 'LỆCH', id, 'kiện web =', pk.length, 'Excel =', n);
+  if (id === 'f1f022cd') {
+    const p = pk[0];
+    const sz = `${p.packThick}x${p.packWidth}x${p.packLength}`;
+    if (sz !== '820x820x1420') { kfail++; console.log('LỆCH kích thước bao bì', sz); }
+  }
+}
+// Phần V: XK_CHUẨN 3 có 20 dòng, XK_CHUẨN 1/2 có 5 dòng
+const st1 = JSON.parse(fs.readFileSync(path.join(dir, 'f1f022cd.state.json'), 'utf8'));
+const pk1 = Calc.packages(st1.partsA, 'XK_CHUẨN 3', []);
+const m3 = Calc.packagingMaterials(pk1, 'XK_CHUẨN 3'), m2 = Calc.packagingMaterials(pk1, 'XK_CHUẨN 2');
+if (m3.items.length !== 20 || m2.items.length !== 5) { kfail++; console.log('LỆCH số dòng Phần V', m3.items.length, m2.items.length); }
+process.exit(fail || kfail ? 1 : 0);

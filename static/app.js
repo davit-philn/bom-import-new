@@ -133,7 +133,7 @@
         const sums = {};
         trs.forEach((tr) => {
           const r = +tr.dataset.row, row = rows[r];
-          tr.classList.toggle('parent', !!(opt.parent && opt.parent(row)));
+          tr.classList.toggle('parent', !!(opt.parent && opt.parent(row, r, rows)));
           cols.forEach((c) => {
             if (c.type === 'calc') {
               const v = c.calc(row, r, rows);
@@ -294,7 +294,7 @@
         field('Kích thước', hd, 'size'), field('Mã sản phẩm *', hd, 'code'), field('Số lượng (VD: 1 Hệ)', hd, 'qty'),
         field('Mục số *', hd, 'muc'), field('Kết cấu', hd, 'structure', { list: 'dl-structures' }), field('Vật liệu', hd, 'material'),
         field('SLSP – số lượng SP theo đơn hàng *', hd, 'slsp', { type: 'number' }),
-        field('Loại cửa', hd, 'doorType', { list: 'dl-doorTypes' }))));
+        )));
     const fin = h('div', { class: 'form' });
     hd.finishCodes.forEach((_, i) => fin.append(field(`Mã hoàn thiện ${i + 1}`, hd.finishCodes, i, { after: renderLists })));
     v.append(Block('p1-fin', '', 'Mã hoàn thiện', { note: 'dùng cho cột "Mã H.thiện" ở Phần II', badge: BADGE_IN }, fin));
@@ -313,13 +313,13 @@
   function viewP2(v) {
     const hd = state.header;
     v.append(h('div', { class: 'hint' }, `Sản phẩm: ${hd.code || '(chưa có mã)'} – Mục ${hd.muc || '?'} – SLSP ${hd.slsp || '?'}. Dán nhiều dòng từ Excel vào ô đầu tiên được. `
-      + 'Dòng có PLDG = 1/2 (in đậm) là một kiện ở Phần IV; các dòng bên dưới là chi tiết con của kiện đó.'));
+      + 'Dòng in đậm = kiện ở Phần IV (STT nguyên và PLDG 1/2); các dòng STT thập phân bên dưới là chi tiết con của kiện đó.'));
     SECTIONS.forEach(([key, label]) => {
       const rows = state[key], used = rows.filter((r) => Object.keys(r).length).length;
       if (key === 'partsA') fill(rows, 12); else if (!rows.length) rows.push({});
       const host = h('div');
       v.append(Block('p2-' + key, label.slice(0, 1), label.slice(3), { count: `${used} dòng`, badge: BADGE_MIX, add: addRows(rows, 10), startCollapsed: key !== 'partsA' && !used }, host));
-      Grid(host, rows, partColumns(key), { parent: (row) => [1, 2].includes(C.partCalc(row, key).pldg) && !C.isBlank(row.name) });
+      Grid(host, rows, partColumns(key), { parent: (row, r, all) => [1, 2].includes(C.partCalc(row, key).pldg) && !C.isBlank(row.name) && !String(C.effectiveStt(all)[r]).includes('.') });
     });
   }
 
@@ -354,7 +354,7 @@
     const sel = h('select', {}, lists.standards.map((s) => h('option', { value: s, selected: s === std }, s)));
     sel.addEventListener('change', () => { state.packaging.standard = sel.value; touch(); render(); });
     v.append(Block('p4-std', '', 'Tiêu chuẩn bao bì', { badge: BADGE_IN, note: 'bao bì = kích thước tinh + phụ trội theo tiêu chuẩn' }, h('div', { class: 'form' }, h('label', {}, 'Tiêu chuẩn', sel))));
-    const pk = C.packages(state.partsA, std);
+    const pk = C.packages(state.partsA, std, state.supplies.metalWork);
     const rows = pk.map((p) => ({
       label: p.label, stt: p.stt || '', name: ` GÓI ${p.no}/${pk.length} ${p.name}`,
       fine: `${fmt(p.thick, 0)} × ${fmt(p.width, 0)} × ${fmt(p.length, 0)}`, qty: p.qty,
@@ -363,7 +363,7 @@
       how: p.nested ? `Giao rời – xếp ${p.nested.layers} lớp, phôi ${fmt(p.nested.sheetW, 0)}×${fmt(p.nested.sheetH, 0)}` : (p.loose ? 'Giao rời – chưa có chi tiết con' : 'Đi module'),
     }));
     const host = h('div');
-    v.append(Block('p4-list', '', 'Danh sách kiện', { note: 'mỗi dòng cha có PLDG = 1/2 ở Phần II là một kiện', count: `${rows.length} kiện`, badge: BADGE_AUTO }, host));
+    v.append(Block('p4-list', '', 'Danh sách kiện', { note: 'dòng Phần II có STT nguyên và PLDG = 1/2 là một kiện; STT thập phân bên dưới là chi tiết con', count: `${rows.length} kiện`, badge: BADGE_AUTO }, host));
     autoGrid(host, rows.length ? rows : [{}], [['label', 'Kiện', 80, { txt: true }], ['stt', 'STT', 50, { txt: true }], ['name', 'Tên', 280, { txt: true }],
       ['fine', 'Tinh (D×R×D)', 130], ['qty', 'SL', 50, { d: 0 }], ['pack', 'Bao bì (D×R×D)', 140], ['kg', 'KL ước (kg)', 90, { d: 2 }], ['flag', 'Cảnh báo', 80, { txt: true }], ['how', 'Hình thức', 300, { txt: true }]]);
     if (!rows.length) host.append(h('div', { class: 'hint' }, 'Chưa có kiện. Ở Phần II đặt PLDG = 1 (đi module) hoặc 2 (giao rời) cho dòng chi tiết cha.'));
@@ -371,12 +371,13 @@
 
   function viewP5(v) {
     const std = state.packaging.standard;
-    const pk = C.packages(state.partsA, std);
-    const m = ['XK_CHUẨN 1', 'TIÊU CHUẨN DỰ ÁN'].includes(std) ? C.packagingMaterials(pk) : null;
+    const pk = C.packages(state.partsA, std, state.supplies.metalWork);
+    const SUPPORTED = ['XK_CHUẨN 1', 'XK_CHUẨN 2', 'XK_CHUẨN 3', 'TIÊU CHUẨN DỰ ÁN'];
+    const m = SUPPORTED.includes(std) ? C.packagingMaterials(pk, std) : null;
     v.append(h('div', { class: 'hint' }, `Tiêu chuẩn đang chọn: ${std} (đổi ở Phần IV). Phần này tự tính từ kích thước kiện; số liệu cuối cùng do file Excel tính khi mở.`));
     if (!m) {
       v.append(Block('p5-none', '', 'Vật tư đóng gói', { badge: BADGE_AUTO }, h('div', { class: 'hint' },
-        ['XK_CHUẨN 1', 'TIÊU CHUẨN DỰ ÁN'].includes(std) ? 'Chưa có kiện để tính vật tư đóng gói.' : 'Tiêu chuẩn này dùng bảng tính riêng trong file Excel (sheet ẩn) – sẽ được tính khi mở file.')));
+        SUPPORTED.includes(std) ? 'Chưa có kiện để tính vật tư đóng gói.' : 'Tiêu chuẩn này dùng bảng tính riêng trong file Excel (sheet ẩn) – sẽ được tính khi mở file.')));
       return;
     }
     const sh = h('div');
